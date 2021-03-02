@@ -1,0 +1,1477 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-69958365-6"></script>
+    <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-69958365-6');
+    </script>
+    <!-- Auto ads - Google -->
+    <script data-ad-client="ca-pub-3427355473051563" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="canonical" href="https://it.markdown.net.br/sintassi-estesa/">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="author" content="Robert Salles">
+    <meta name="description" content="✓ Tabelle, ✓ Blocco codice, ✓ Nota a piè di pagina, ✓ Emojis e altro ancora. Tutorial completo che insegna facilmente come utilizzare gli elementi avanzati di Markdown®.">
+    <meta name="twitter:card" content="summary">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://it.markdown.net.br/sintassi-estesa/">
+    <meta property="og:title" content="Markdown® Advanced: sintassi, utilizzo ed esempi [passo dopo passo]">
+    <meta property="og:description" content="✓ Tabelle, ✓ Blocco codice, ✓ Nota a piè di pagina, ✓ Emojis e altro ancora. Tutorial completo che insegna facilmente come utilizzare gli elementi avanzati di Markdown®.">
+    <meta property="og:image" content="https://markdown.net.br/assets/img/markdown.jpg">
+
+    <title>Markdown® Advanced: sintassi, utilizzo ed esempi [passo dopo passo]</title>
+    <!-- Favicons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2196f3">
+    <meta name="msapplication-TileColor" content="#2196f3">
+    <!--  Android 5 Chrome Color-->
+    <meta name="theme-color" content="#2196f3">
+    <!-- CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/show-invisibles/prism-show-invisibles.min.css" integrity="sha256-nOfkEPu/TzBvIxN8D/vW8weOUczzDbxRjgik/hA2hBI=" crossorigin="anonymous" />
+    <style type="text/css">
+    	.mv-40 {
+    		margin-top: 40px;
+    		margin-bottom: 40px;
+    	}
+
+    	img[src=""],
+    	img:not([src]) {
+    	  visibility: hidden;
+    	}
+
+    	.caption {
+    	    display: flex;
+    	    justify-content: center;
+    	    align-items: center;
+    	    margin: 10px 0;
+    	    color: hsl(0deg 0% 33%);
+    	    font-style: italic;
+    	    font-size: 75%;
+    	}
+
+    	picture {
+    		display: block;
+    		position: relative;
+    	}
+
+    	.cover-link {
+    		position: absolute;
+    		top: 0;
+    		bottom: 0;
+    		left: 0;
+    		right: 0;
+    	}
+    </style>
+  </head>
+  <body class="themes" cz-shortcut-listen="true">
+    <header>
+      <div class="container">
+  <a href="#" data-target="nav-mobile" class="top-nav sidenav-trigger waves-effect waves-light circle">
+  <i class="material-icons">menu</i>
+  </a>
+</div>
+<ul id="nav-mobile" class="sidenav">
+  <li class="logo blue">
+    <a id="logo-container" href="/" class="brand-logo">
+    <img src="https://markdown.net.br/assets/img/markdown-logo-transparent.svg" height="100">
+    </a>
+  </li>
+  <li class="push-it-down"></li>
+  <li class="search white">
+    <div class="search-wrapper">
+      <input id="search" placeholder="Ricerca"><i class="material-icons">search</i>
+      <div class="search-results"></div>
+    </div>
+  </li>
+  <li class="bold white">
+    <a href="/introduzione/" class="waves-effect waves-blue"><i class="tiny material-icons">child_care</i>Introduzione</a>
+  </li>
+  <li class="bold white">
+    <a href="/sintassi-di-base/" class="waves-effect waves-blue"><i class="tiny material-icons">short_text</i>Sintassi di base</a>
+  </li>
+  <li class="bold white">
+    <a href="/sintassi-estesa/" class="waves-effect waves-blue"><i class="tiny material-icons">format_align_left</i>Sintassi estesa</a>
+  </li>
+  <li class="bold white">
+    <a href="/cheatsheet/" class="waves-effect waves-blue"><i class="tiny material-icons">help_outline</i>Riferimento rapido</a>
+  </li>
+  <li class="bold white">
+    <a href="/software/" class="waves-effect waves-blue"><i class="tiny material-icons">card_travel</i>Software</a>
+  </li>
+</ul>
+    </header>
+    <main>
+      <div class="section" id="index-banner">
+        <div class="container">
+          <div class="row" style="margin-bottom: 0;">
+            <div class="col s12 m6 l7 offset-m1 offset-l1">
+              <h1>Sintassi estesa</h1>
+              <h4 class="light">Funzionalità avanzate basate sulle basi di Markdown.</h4>
+              <ol class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope
+                    itemtype="https://schema.org/ListItem">
+                  <a itemprop="item" href="/">
+                      <span itemprop="name">Markdown</span></a>
+                  <meta itemprop="position" content="1" />
+                </li>
+                <li>
+<i class="fas fa-chevron-right chevron-separator"></i>
+</li>
+<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+<span itemprop="name">Sintassi estesa</span>
+<meta itemprop="position" content="2" />
+</li>
+
+              </ol>
+            </div>
+            <div class="col s12 m5 l4 mt-s-30" align="center">
+            	<!-- square-fixed-300-250 -->
+            	<ins class="adsbygoogle"
+            	     style="display:inline-block;width:300px;height:250px"
+            	     data-ad-client="ca-pub-3427355473051563"
+            	     data-ad-slot="1035906960"></ins>
+            	<script>
+            	     (adsbygoogle = window.adsbygoogle || []).push({});
+            	</script>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <!--  Outer row  -->
+        <div class="row">
+          <div class="section col s12 m8 offset-m1 xl7 offset-xl1">
+            <div class="row scrollspy">
+<div class="col s12">
+		<h2 id="overview">introduzione</h2>
+
+		<p>La sintassi originale di Markdown, pubblicata da John Gruber, aggiungeva diversi elementi essenziali per la modifica dei documenti, ma alcuni utenti non erano soddisfatti.</p>
+
+		<p>La sintassi estesa cerca di risolvere questa insoddisfazione aggiungendo nuovi elementi attraverso nuovi contrassegni.</p>
+
+		<p class="mv-40">
+		    <ins class="adsbygoogle"
+		         style="display:block; text-align:center;"
+		         data-ad-layout="in-article"
+		         data-ad-format="fluid"
+		         data-ad-client="ca-pub-3427355473051563"
+		         data-ad-slot="3854885260"></ins>
+		    <script>
+		         (adsbygoogle = window.adsbygoogle || []).push({});
+		    </script>
+		</p>
+
+		<p>Tabelle, blocchi di codice, generazione automatica di links e persino note a piè di pagina sono esempi di estensione della sintassi di base di Markdown.</p>
+
+		<p>Questi elementi possono essere attivati ​​installando un plugin per il tuo processore Markdown o anche usando una piccola variazione della sintassi del linguaggio.</p>
+
+		<blockquote><b>NOTA</b>: è del tutto possibile che la tua applicazione Markdown abbia già il supporto per gli elementi presentati in questo articolo, quindi vale la pena testarli ciascuno mentre si segue il tutorial.</blockquote>
+
+		<h2 id="markdown-flavors">Sapori di Markdown</h2>
+
+        <div class="image-container">
+            <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-flavors-representation_w860.webp 860w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-flavors-representation_w766.webp 766w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-flavors-representation_w672.webp 672w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-flavors-representation_w578.webp 578w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-flavors-representation_w484.webp 484w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-flavors-representation_w390.webp 390w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-flavors-representation_w296.webp 296w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-flavors-representation_w202.webp 202w"
+		         sizes="(max-width: 672px) 100vw, 672px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Tutorial Markdown - sapori Markdown"
+		        	title="Tutorial Markdown - sapori Markdown"
+		         	src="https://markdown.net.br/assets/img/extended-syntax/markdown-flavors-representation_w860.png"
+		         	srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-flavors-representation_w860.png 860w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-flavors-representation_w766.png 766w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-flavors-representation_w672.png 672w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-flavors-representation_w578.png 578w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-flavors-representation_w484.png 484w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-flavors-representation_w390.png 390w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-flavors-representation_w296.png 296w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-flavors-representation_w202.png 202w"
+		         	sizes="(max-width: 672px) 100vw, 672px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/extended-syntax/markdown-flavors-representation_w860.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>sapori di Markdown</span>
+		</figcaption>
+		</figure>
+        </div>
+
+		<p>Markdown ha alcuni gusti diversi, ovvero variazioni della sintassi di base del linguaggio.</p>
+
+		<p>Queste variazioni, oltre a supportare la sintassi di base, aggiungono elementi che arricchiscono la modifica del documento.</p>
+
+		<p class="mv-40">
+		    <ins class="adsbygoogle"
+		         style="display:block; text-align:center;"
+		         data-ad-layout="in-article"
+		         data-ad-format="fluid"
+		         data-ad-client="ca-pub-3427355473051563"
+		         data-ad-slot="3854885260"></ins>
+		    <script>
+		         (adsbygoogle = window.adsbygoogle || []).push({});
+		    </script>
+		</p>
+
+		<p>Le applicazioni compatibili con Markdown useranno spesso una delle lingue mostrate di seguito:</p>
+
+		<p><a href="https://commonmark.org/" target="_blank" rel="nofollow">CommonMark</a></p>
+		<p><a href="https://github.github.com/gfm/" target="_blank" rel="nofollow">GitHub-flavored Markdown (GFM)</a></p>
+		<p><a href="https://michelf.ca/projects/php-markdown/extra/" target="_blank" rel="nofollow">Markdown Extra</a></p>
+		<p><a href="https://rmarkdown.rstudio.com/" target="_blank" rel="nofollow">R Markdown</a></p>
+		<p><a href="https://fletcherpenney.net/multimarkdown/" target="_blank" rel="nofollow">MultiMarkdown</a></p>
+
+		<h2 id="markdown-tables">Creazione di tabelle in Markdown</h2>
+
+		<p>Una tabella in Markdown può essere utilizzata per presentare i confronti dei dati da parte dell'utente.</p>
+
+		<p>Per creare una tabella in Markdown usiamo trattini <code class="lang-plaintext">-</code> e barre verticali <code class="lang-plaintext">|</code> per separare righe e colonne.</p>
+
+		<p class="mv-40">
+		    <ins class="adsbygoogle"
+		         style="display:block; text-align:center;"
+		         data-ad-layout="in-article"
+		         data-ad-format="fluid"
+		         data-ad-client="ca-pub-3427355473051563"
+		         data-ad-slot="3854885260"></ins>
+		    <script>
+		         (adsbygoogle = window.adsbygoogle || []).push({});
+		    </script>
+		</p>
+
+		<p>La prima riga della tabella è dove creiamo l'intestazione, separando quella riga con tre o più trattini <code class="lang-plaintext">---</code> in modo che il processore Markdown comprenda la formattazione.</p>
+
+		<p>La separazione delle colonne viene eseguita utilizzando la barra verticale <code class="lang-plaintext">|</code>, chiamata anche <em>pipe</em> dai programmatori.</p>
+
+        <div class="image-container">
+            <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-table_w957.webp 957w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-table_w849.webp 849w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-table_w741.webp 741w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-table_w633.webp 633w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-table_w525.webp 525w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-table_w417.webp 417w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-table_w309.webp 309w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-table_w201.webp 201w"
+		         sizes="(max-width: 741px) 100vw, 741px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Tutorial su Markdown - Tabelle in Markdown"
+		        	title="Tutorial su Markdown - Tabelle in Markdown"
+		         	src="https://markdown.net.br/assets/img/extended-syntax/markdown-table_w957.png"
+		         	srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-table_w957.png 957w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-table_w849.png 849w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-table_w741.png 741w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-table_w633.png 633w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-table_w525.png 525w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-table_w417.png 417w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-table_w309.png 309w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-table_w201.png 201w"
+		         	sizes="(max-width: 741px) 100vw, 741px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/extended-syntax/markdown-table_w957.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Tavoli in Markdown</span>
+		</figcaption>
+		</figure>
+        </div>
+
+		<p>Di seguito è riportata una tabella di esempio:</p>
+
+		<div class="code-example">
+	<pre class="lang-markdown"><code>| Titolo  | Titolo   |
+| ------- | -------- |
+| Testo   | Testo    |
+| Testo   | Testo    |</code></pre>
+	<a href="/editore/?markdown=|%20Titolo%20%20|%20Titolo%20%20%20|%0D%0A|%20%2D%2D%2D%2D%2D%2D%2D%20|%20%2D%2D%2D%2D%2D%2D%2D%2D%20|%0D%0A|%20Testo%20%20%20|%20Testo%20%20%20%20|%0D%0A|%20Testo%20%20%20|%20Testo%20%20%20%20|" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+		<p>Le barre verticali <code class="lang-plaintext">|</code> utilizzati alle estremità del tavolo sono per scopi puramente cosmetici, ovvero è possibile creare un tavolo senza le barre laterali.</p>
+
+        <p>Esempio:</p>
+
+                <div class="code-example">
+	<pre class="lang-markdown"><code>Titolo  | Titolo
+------- | --------
+Testo   | Testo
+Testo   | Testo</code></pre>
+	<a href="/editore/?markdown=Titolo%20%20|%20Titolo%0D%0A%2D%2D%2D%2D%2D%2D%2D%20|%20%2D%2D%2D%2D%2D%2D%2D%2D%0D%0ATesto%20%20%20|%20Testo%0D%0ATesto%20%20%20|%20Testo" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+		<p>L'output reso in HTML:</p>
+
+		<table class="table table-bordered responsive-table">
+			<thead>
+				<tr>
+					<th>Titolo</th>
+					<th>Titolo</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Testo</td>
+					<td>Testo</td>
+				</tr>
+				<tr>
+					<td>Testo</td>
+					<td>Testo</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p>La larghezza della cella, all'interno di una tabella Markdown, può variare.</p>
+
+        <p>Esempio:</p>
+
+		<div class="code-example">
+	<pre class="lang-markdown"><code>| Titolo | Titolo |
+| --- | ----------- |
+| Testo | Testo |
+| Testo     | Testo |</code></pre>
+	<a href="/editore/?markdown=|%20Titolo%20|%20Titolo%20|%0D%0A|%20%2D%2D%2D%20|%20%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%20|%0D%0A|%20Testo%20|%20Testo%20|%0D%0A|%20Testo%20%20%20%20%20|%20Testo%20|" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+        <h3 id="markdown-generating-tables">Generazione automatica di tabelle in Markdown</h3>
+
+        <p>Markdown è qui per semplificare la modifica dei documenti e la creazione di tabelle può diventare un po 'più noiosa.</p>
+
+        <p>L'uso di barre e trattini verticali potrebbe non piacere ad alcuni utenti, quindi è interessante che siamo in grado di automatizzare il processo di formattazione delle tabelle in Markdown.</p>
+
+        <p><b>Passaggio 1</b> - Apri il nostro editor Markdown <a href="/editor/" target="_blank">facendo clic qui</a>.</p>
+
+        <p><b>Passaggio 2</b> - Fare clic sull'icona di generazione automatica della tabella per aprire il pannello delle opzioni.</p>
+
+        <div class="image-container">
+            <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-1_w678.webp 678w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-1_w610.webp 610w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-1_w542.webp 542w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-1_w474.webp 474w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-1_w406.webp 406w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-1_w338.webp 338w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-1_w270.webp 270w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-1_w202.webp 202w"
+		         sizes="(max-width: 678px) 100vw, 678px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Tutorial su Markdown - Generazione di tabelle in Markdown Parte 1"
+		        	title="Tutorial su Markdown - Generazione di tabelle in Markdown Parte 1"
+		         	src="https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-1_w678.png"
+		         	srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-1_w678.png 678w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-1_w610.png 610w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-1_w542.png 542w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-1_w474.png 474w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-1_w406.png 406w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-1_w338.png 338w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-1_w270.png 270w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-1_w202.png 202w"
+		         	sizes="(max-width: 678px) 100vw, 678px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-1_w678.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			
+		</figure>
+        </div>
+
+        <p><b>Passaggio 3</b> - Nel pannello delle opzioni:</p>
+
+        <ol>
+            <li>Immettere il numero di righe nella tabella.</li>
+            <li>Imposta il numero di colonne nella tabella.</li>
+            <li>Scegli la posizione di allineamento del testo all'interno delle colonne.</li>
+            <li>Fare clic per confermare e generare la struttura della tabella.</li>
+        </ol>
+
+        <div class="image-container">
+            <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-2_w390.webp 390w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-2_w342.webp 342w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-2_w294.webp 294w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-2_w246.webp 246w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-2_w198.webp 198w"
+		         sizes="(max-width: 390px) 100vw, 390px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Tutorial su Markdown - Generazione di tabelle in Markdown Parte 2"
+		        	title="Tutorial su Markdown - Generazione di tabelle in Markdown Parte 2"
+		         	src="https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-2_w390.png"
+		         	srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-2_w390.png 390w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-2_w342.png 342w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-2_w294.png 294w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-2_w246.png 246w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-2_w198.png 198w"
+		         	sizes="(max-width: 390px) 100vw, 390px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-2_w390.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			
+		</figure>
+        </div>
+
+        <p><b>Passaggio 4</b> - Inserisci i valori per ogni cella.</p>
+
+        <div class="image-container">
+            <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-3_w628.webp 628w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-3_w567.webp 567w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-3_w506.webp 506w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-3_w445.webp 445w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-3_w384.webp 384w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-3_w323.webp 323w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-3_w262.webp 262w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-3_w201.webp 201w"
+		         sizes="(max-width: 628px) 100vw, 628px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Tutorial su Markdown - Generazione di tabelle in Markdown Parte 3"
+		        	title="Tutorial su Markdown - Generazione di tabelle in Markdown Parte 3"
+		         	src="https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-3_w628.png"
+		         	srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-3_w628.png 628w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-3_w567.png 567w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-3_w506.png 506w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-3_w445.png 445w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-3_w384.png 384w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-3_w323.png 323w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-3_w262.png 262w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-3_w201.png 201w"
+		         	sizes="(max-width: 628px) 100vw, 628px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-3_w628.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Struttura della tabella in Markdown generata automaticamente.</span>
+		</figcaption>
+		</figure>
+        </div>
+
+		<h3 id="markdown-tables-alignment">Allineamento</h3>
+
+		<p>Markdown ti consente di allineare il contenuto di una colonna della tabella a sinistra, a destra o al centro.</p>
+
+		<p>Per allineare il contenuto a sinistra in una tabella Markdown, inserire i due punti <code class="lang-plaintext">:</code> prima dei trattini <code class="lang-plaintext">---</code> che separano la riga di intestazione.</p>
+
+		<p>Esempio:</p>
+
+
+        <div class="code-example">
+	<pre class="lang-markdown"><code>| Frutta  | Verdure | Verdure |
+| :---    | :----    | :---    |
+| anacardi    | Crescione   | Carota |
+| Mela    | Broccoli | Pisello |</code></pre>
+	<a href="/editore/?markdown=|%20Frutta%20%20|%20Verdure%20|%20Verdure%20|%0D%0A|%20:%2D%2D%2D%20%20%20%20|%20:%2D%2D%2D%2D%20%20%20%20|%20:%2D%2D%2D%20%20%20%20|%0D%0A|%20anacardi%20%20%20%20|%20Crescione%20%20%20|%20Carota%20|%0D%0A|%20Mela%20%20%20%20|%20Broccoli%20|%20Pisello%20|" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+		<p>Risultato in HTML:</p>
+
+		<table class="table table-bordered responsive-table">
+			<thead>
+				<tr>
+					<th style="text-align: left">Frutta</th>
+					<th style="text-align: left">Verdure</th>
+					<th style="text-align: left">Verdure</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="text-align: left">anacardi</td>
+					<td style="text-align: left">Crescione</td>
+					<td style="text-align: left">Carota</td>
+				</tr>
+				<tr>
+					<td style="text-align: left">Mela</td>
+					<td style="text-align: left">Broccoli</td>
+					<td style="text-align: left">Pisello</td>
+				</tr>
+			</tbody>
+		</table>
+
+        <blockquote><b>NOTA</b>: l'utilizzo dei due punti per allineare il testo a sinistra è facoltativo, poiché il contenuto della tabella è già allineato in quella posizione per impostazione predefinita.</blockquote>
+
+		<p>Per allineare il testo a destra all'interno della tabella Markdown, inserire i due punti <code class="lang-plaintext">:</code> dopo i trattini <code class="lang-plaintext">---</code> che separano la riga di intestazione.</p>
+
+		<p>Esempio:</p>
+
+		<div class="code-example">
+	<pre class="lang-markdown"><code>| Frutta  | Verdure | Verdure |
+|    ---: |    ----: |    ---: |
+| anacardi    | Crescione   | Carota |
+| Mela    | Broccoli | Pisello |</code></pre>
+	<a href="/editore/?markdown=|%20Frutta%20%20|%20Verdure%20|%20Verdure%20|%0D%0A|%20%20%20%20%2D%2D%2D:%20|%20%20%20%20%2D%2D%2D%2D:%20|%20%20%20%20%2D%2D%2D:%20|%0D%0A|%20anacardi%20%20%20%20|%20Crescione%20%20%20|%20Carota%20|%0D%0A|%20Mela%20%20%20%20|%20Broccoli%20|%20Pisello%20|" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+		<p>Risultato in HTML:</p>
+
+		<table class="table table-bordered responsive-table">
+			<thead>
+				<tr>
+					<th style="text-align: right">Frutta</th>
+					<th style="text-align: right">Verdure</th>
+					<th style="text-align: right">Verdure</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="text-align: right">anacardi</td>
+					<td style="text-align: right">Crescione</td>
+					<td style="text-align: right">Carota</td>
+				</tr>
+				<tr>
+					<td style="text-align: right">Mela</td>
+					<td style="text-align: right">Broccoli</td>
+					<td style="text-align: right">Pisello</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p>Per allineare il contenuto della colonna al centro in una tabella Markdown, aggiungi i due punti <code class="lang-plaintext">:</code> prima e dopo i trattini che separano la riga di intestazione.</p>
+
+		<p>Esempio:</p>
+
+		<div class="code-example">
+	<pre class="lang-markdown"><code>| Frutta  | Verdure | Verdure |
+|  :---:  |  :----:  |  :---:  |
+| anacardi    | Crescione   | Carota |
+| Mela    | Broccoli | Pisello |</code></pre>
+	<a href="/editore/?markdown=|%20Frutta%20%20|%20Verdure%20|%20Verdure%20|%0D%0A|%20%20:%2D%2D%2D:%20%20|%20%20:%2D%2D%2D%2D:%20%20|%20%20:%2D%2D%2D:%20%20|%0D%0A|%20anacardi%20%20%20%20|%20Crescione%20%20%20|%20Carota%20|%0D%0A|%20Mela%20%20%20%20|%20Broccoli%20|%20Pisello%20|" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+		<p>Risultato in HTML:</p>
+
+		<table class="table table-bordered responsive-table">
+			<thead>
+				<tr>
+					<th style="text-align: center">Frutta</th>
+					<th style="text-align: center">Verdure</th>
+					<th style="text-align: center">Verdure</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="text-align: center">anacardi</td>
+					<td style="text-align: center">Crescione</td>
+					<td style="text-align: center">Carota</td>
+				</tr>
+				<tr>
+					<td style="text-align: center">Mela</td>
+					<td style="text-align: center">Broccoli</td>
+					<td style="text-align: center">Pisello</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p>È possibile unire la formattazione dell'allineamento, poiché influisce solo sul contenuto all'interno della colonna.</p>
+
+		<p>Esempio:</p>
+
+		<div class="code-example">
+	<pre class="lang-markdown"><code>| Frutta  | Verdure | Verdure |
+| :---    |  :----:  |    ---: |
+| anacardi    | Crescione   | Carota |
+| Mela    | Broccoli | Pisello |</code></pre>
+	<a href="/editore/?markdown=|%20Frutta%20%20|%20Verdure%20|%20Verdure%20|%0D%0A|%20:%2D%2D%2D%20%20%20%20|%20%20:%2D%2D%2D%2D:%20%20|%20%20%20%20%2D%2D%2D:%20|%0D%0A|%20anacardi%20%20%20%20|%20Crescione%20%20%20|%20Carota%20|%0D%0A|%20Mela%20%20%20%20|%20Broccoli%20|%20Pisello%20|" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+		<p>Risultato in HTML:</p>
+
+		<table class="table table-bordered responsive-table">
+			<thead>
+				<tr>
+					<th style="text-align: left">Frutta</th>
+					<th style="text-align: center">Verdure</th>
+					<th style="text-align: right">Verdure</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="text-align: left">anacardi</td>
+					<td style="text-align: center">Crescione</td>
+					<td style="text-align: right">Carota</td>
+				</tr>
+				<tr>
+					<td style="text-align: left">Mela</td>
+					<td style="text-align: center">Broccoli</td>
+					<td style="text-align: right">Pisello</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p>Vale la pena notare che l'allineamento dei trattini <code class="lang-plaintext">---</code> della riga che separa i titoli della tabella è irrilevante per il processore Markdown, ciò che verrà veramente preso in considerazione è la posizione dei due punti <code class="lang-plaintext">:</code>.</p>
+
+		<p>Nell'esempio seguente i trattini <code class="lang-plaintext">---</code> sono posizionati a sinistra della colonna e l'allineamento funziona in modo uniforme.</p>
+
+		<div class="code-example">
+	<pre class="lang-markdown"><code>| Frutta  | Verdure | Verdure |
+| :---    | :----:   | ---:    |
+| anacardi    | Crescione   | Carota |
+| Mela    | Broccoli | Pisello |</code></pre>
+	<a href="/editore/?markdown=|%20Frutta%20%20|%20Verdure%20|%20Verdure%20|%0D%0A|%20:%2D%2D%2D%20%20%20%20|%20:%2D%2D%2D%2D:%20%20%20|%20%2D%2D%2D:%20%20%20%20|%0D%0A|%20anacardi%20%20%20%20|%20Crescione%20%20%20|%20Carota%20|%0D%0A|%20Mela%20%20%20%20|%20Broccoli%20|%20Pisello%20|" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+		<p>Risultato in HTML:</p>
+
+		<table class="table table-bordered responsive-table">
+			<thead>
+				<tr>
+					<th style="text-align: left">Frutta</th>
+					<th style="text-align: center">Verdure</th>
+					<th style="text-align: right">Verdure</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="text-align: left">anacardi</td>
+					<td style="text-align: center">Crescione</td>
+					<td style="text-align: right">Carota</td>
+				</tr>
+				<tr>
+					<td style="text-align: left">Mela</td>
+					<td style="text-align: center">Broccoli</td>
+					<td style="text-align: right">Pisello</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<blockquote><b>NOTA</b>: Anche il contenuto dell'intestazione della tabella verrà allineato in base alla posizione dei due punti.</blockquote>
+
+		<h3 id="markdown-tables-text-formatting">Formattazione del testo nelle tabelle</h3>
+
+		<p>Puoi inserire alcuni elementi di base di Markdown in una tabella.</p>
+
+		<p>Alcune formattazioni consentite sono la creazione di links, l'enfatizzazione del contenuto in grassetto o corsivo e l'evidenziazione del testo come codice, ma è accettato solo il codice online, cioè quando viene creato con l'apertura e la chiusura delle virgolette [a1] "".</p>
+
+		<p class="mv-40">
+		    <ins class="adsbygoogle"
+		         style="display:block; text-align:center;"
+		         data-ad-layout="in-article"
+		         data-ad-format="fluid"
+		         data-ad-client="ca-pub-3427355473051563"
+		         data-ad-slot="3854885260"></ins>
+		    <script>
+		         (adsbygoogle = window.adsbygoogle || []).push({});
+		    </script>
+		</p>
+
+		<p>Titoli, blocchi di codice, blockquotes, elenchi, linee orizzontali, immagini e tags HTML non funzionano.</p>
+
+		<blockquote><b>NOTA</b>: Puoi anche trovare applicazioni che accettano l'inserimento degli elementi sopra menzionati all'interno di una tabella, ma questo comprometterà la portabilità del tuo documento, poiché altri programmi non lo supportano.</blockquote>
+
+
+		<h3 id="escaping-vertical-bars">Fuga dalle barre verticali sui tavoli</h3>
+
+		<p>Hai già imparato che per separare le colonne della tabella usiamo la barra verticale <code class="lang-plaintext">|</code>.</p>
+
+		<p>Ora, se intendi mostrare lo stesso carattere come contenuto all'interno di una cella, devi utilizzare la codifica HTML: <code class="lang-plaintext">&amp;#124;</code>.</p>
+
+		<p>Ao converter o seu documento para um outro formato, o código <code class="lang-plaintext">&amp;#124;</code> se transformará em uma barra vertical <code class="lang-plaintext">|</code>.</p>
+
+        <div class="image-container">
+            <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/extended-syntax/escaping-vertical-bar-markdown_w963.webp 963w,
+https://markdown.net.br/assets/img/extended-syntax/escaping-vertical-bar-markdown_w854.webp 854w,
+https://markdown.net.br/assets/img/extended-syntax/escaping-vertical-bar-markdown_w745.webp 745w,
+https://markdown.net.br/assets/img/extended-syntax/escaping-vertical-bar-markdown_w636.webp 636w,
+https://markdown.net.br/assets/img/extended-syntax/escaping-vertical-bar-markdown_w527.webp 527w,
+https://markdown.net.br/assets/img/extended-syntax/escaping-vertical-bar-markdown_w418.webp 418w,
+https://markdown.net.br/assets/img/extended-syntax/escaping-vertical-bar-markdown_w309.webp 309w,
+https://markdown.net.br/assets/img/extended-syntax/escaping-vertical-bar-markdown_w200.webp 200w"
+		         sizes="(max-width: 745px) 100vw, 745px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown Tutorial - Sfuggire a una barra verticale all"
+		        	title="Markdown Tutorial - Sfuggire a una barra verticale all"
+		         	src="https://markdown.net.br/assets/img/extended-syntax/escaping-vertical-bar-markdown_w963.png"
+		         	srcset="https://markdown.net.br/assets/img/extended-syntax/escaping-vertical-bar-markdown_w963.png 963w,
+https://markdown.net.br/assets/img/extended-syntax/escaping-vertical-bar-markdown_w854.png 854w,
+https://markdown.net.br/assets/img/extended-syntax/escaping-vertical-bar-markdown_w745.png 745w,
+https://markdown.net.br/assets/img/extended-syntax/escaping-vertical-bar-markdown_w636.png 636w,
+https://markdown.net.br/assets/img/extended-syntax/escaping-vertical-bar-markdown_w527.png 527w,
+https://markdown.net.br/assets/img/extended-syntax/escaping-vertical-bar-markdown_w418.png 418w,
+https://markdown.net.br/assets/img/extended-syntax/escaping-vertical-bar-markdown_w309.png 309w,
+https://markdown.net.br/assets/img/extended-syntax/escaping-vertical-bar-markdown_w200.png 200w"
+		         	sizes="(max-width: 745px) 100vw, 745px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/extended-syntax/escaping-vertical-bar-markdown_w963.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Sfuggire a una barra verticale all</span>
+		</figcaption>
+		</figure>
+        </div>
+
+
+		<h2 id="fenced-code-block">Blocco di codice recintato</h2>
+
+		<p>Un blocco di codice circondato consente di creare rappresentazioni di codice senza dover rientrare la riga in quattro spazi o una tabulazione, inoltre, consente anche di definire quale linguaggio di programmazione rappresenta il blocco, con questo è possibile applicare la sintassi appropriata evidenziando.</p>
+
+		<p>Per creare un blocco di codice recintato in Markdown, inserire tre virgolette <code class="lang-plaintext">` ``</code>prima del contenuto e tre virgolette <code class="lang-plaintext">`` `</code> dopo il contenuto.</p>
+
+		<p>Esempio:</p>
+
+		<div class="code-example">
+	<pre class="lang-markdown"><code>```
+{
+  "Nome": "Robert",
+  "cognome": "Salles",
+  "età": 25
+}
+```</code></pre>
+	<a href="/editore/?markdown=```%0D%0A{%0D%0A%20%20%22Nome%22:%20%22Robert%22%2C%0D%0A%20%20%22cognome%22:%20%22Salles%22%2C%0D%0A%20%20%22et%C3%A0%22:%2025%0D%0A}%0D%0A```" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+		<p>L'output renderizzato ha questo aspetto:</p>
+
+		<pre class="lang-javascript"><code>{
+  "Nome": "Robert",
+  "cognome": "Salles",
+  "età": 25
+}</code></pre>
+
+		<blockquote><b>NOTA</b>: Alcuni processori Markdown consentono di utilizzare le tessere <code class="lang-plaintext">~~~</code> al posto delle virgolette posteriori per formare il blocco di codice.</blockquote>
+
+		<p>Vedi anche: <a href="/sintassi-di-base/#escaping-backticks">Come sfuggire alle dorsali all'interno di un blocco di codice.</a></p>
+
+		<h2 id="markdown-sintax-highlighting">Evidenziazione della sintassi</h2>
+
+		<p>Molte librerie JavaScript vengono utilizzate per evidenziare blocchi di codice, ad esempio: <a href="https://prismjs.com/" target="_blank">Prism.js</a> & <a href="https://highlightjs.org/" target="_blank">highlight.js</a>.</p>
+
+		<p>Prendono uno specifico tag HTML, di solito tag <code class="lang-plaintext">pre</code> o tag <codice class="lang-plaintext">codice</codice> e applicano l'evidenziazione in base alla sintassi del linguaggio di programmazione del blocco di codice.</p>
+
+		<p class="mv-40">
+		    <ins class="adsbygoogle"
+		         style="display:block; text-align:center;"
+		         data-ad-layout="in-article"
+		         data-ad-format="fluid"
+		         data-ad-client="ca-pub-3427355473051563"
+		         data-ad-slot="3854885260"></ins>
+		    <script>
+		         (adsbygoogle = window.adsbygoogle || []).push({});
+		    </script>
+		</p>
+
+		<p>La sintassi del linguaggio è solitamente definita dal parametro tag class, ad esempio:</p>
+
+		<pre class="lang-html"><code>&lt;code class="lang-markdown"&gt;&lt;/code&gt;</code></pre>
+
+		<p>Utilizzando la classe <code class=<lang-plaintext class="lang-plaintext">lang-plaintext</lang-plaintext>>lang-markdown</code>, il framework saprà che il contenuto tra il "codice" tags dovrebbe essere evidenziato in base al linguaggio Markdown.</p>
+
+		<blockquote><b>NOTA</b>: L'applicazione dell'evidenziatore può essere effettuata anche automaticamente, alcuni strumenti hanno la capacità di rilevare i linguaggi di programmazione in modo automatizzato, senza la necessità di definirli nel parametro class.</blockquote>
+
+		<p>Nella creazione del blocco di codice utilizzando Markdown è possibile specificare il linguaggio di programmazione subito dopo l'apertura delle prime tre virgolette <code class="lang-plaintext">` ``</code>.</p>
+
+		<p>Esempio:</p>
+
+		<div class="code-example">
+	<pre class="lang-markdown"><code>```json
+{
+  "Nome": "Robert",
+  "cognome": "Salles",
+  "età": 25
+}
+```</code></pre>
+	<a href="/editore/?markdown=```json%0D%0A{%0D%0A%20%20%22Nome%22:%20%22Robert%22%2C%0D%0A%20%20%22cognome%22:%20%22Salles%22%2C%0D%0A%20%20%22et%C3%A0%22:%2025%0D%0A}%0D%0A```" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+		<p>Come nella prima riga del blocco, subito dopo le tre dorsali di apertura, è stato specificato <code class="lang-plaintext">json</code> il codice verrà evidenziato di conseguenza:</p>
+
+		<pre class="lang-javascript"><code>{
+  "Nome": "Robert",
+  "cognome": "Salles",
+  "età": 25
+}</code></pre>
+		<blockquote><b>NOTA</b>: il codice verrà evidenziato solo se si utilizza una libreria JavaScript che esegue questo tipo di attività, HTML da solo non evidenzia il codice.</blockquote>
+
+		<h2 id="markdown-footnotes">Note a piè di pagina</h2>
+
+		<p>Una nota a piè di pagina in Markdown consente all'utente di creare un riferimento ad alcuni concetti menzionati nel documento.</p>
+
+		<p>In genere, queste note a piè di pagina sono posizionate alla fine del documento, ma in Markdown puoi definirle ovunque nel testo.</p>
+
+		<p class="mv-40">
+		    <ins class="adsbygoogle"
+		         style="display:block; text-align:center;"
+		         data-ad-layout="in-article"
+		         data-ad-format="fluid"
+		         data-ad-client="ca-pub-3427355473051563"
+		         data-ad-slot="3854885260"></ins>
+		    <script>
+		         (adsbygoogle = window.adsbygoogle || []).push({});
+		    </script>
+		</p>
+
+		<p>Quando si crea una nota a piè di pagina, verrà inserito un numero in apice sotto forma di link nel punto in cui è stato creato, quando l'utente fa clic su questo link verrà portato direttamente nel luogo che contiene il riferimento della nota.</p>
+
+		<p>La sintassi per creare la nota a piè di pagina è divisa in due parti.</p>
+
+		<p>La prima parte rappresenta il numero contenente lo link e viene creata utilizzando parentesi quadre, un accento circonflesso e un identificatore, ad esempio: <code class="lang-plaintext">[^1]</code>.</p>
+
+		<p>L'identificatore può contenere numeri e lettere, ma non accetta spazi o tabulazioni.</p>
+
+		<p>La seconda parte copre il contenuto del riferimento stesso, per crearlo usa parentesi quadre, un accento circonflesso seguito dallo stesso identificatore (che hai creato in precedenza), due punti, uno spazio vuoto e il testo, esempio: <code class="lang-plaintext">[^1]: La mia nota a piè di pagina</code>.</p>
+
+		<pre class="lang-markdown"><code>Ecco una semplice nota a piè di pagina[^1]. Ecco una nota a piè di pagina più elaborata[^bignote].
+
+[^1]: Questa è la prima nota a piè di pagina.
+
+[^bignote]: Eccone uno con diversi paragrafi e codice.
+
+    Rientra i paragrafi per includerli nella nota a piè di pagina.
+
+    `{ il mio codice }`
+
+    Aggiungi tutti i paragrafi che desideri.</code></pre>
+
+		<p>La riderizzazione in HTML è simile a questa:</p>
+
+		<p>Ecco una semplice nota a piè di pagina<sup id="fnref:1" role="doc-noteref"><a href="#fn:1">1</a></sup>. Ecco una nota a piè di pagina più elaborata<sup id="fnref:bignote"><a href="#fn:bignote">2</a></sup>.</p>
+
+		<div class="footnotes">
+			<ol>
+				<li id="fn:1">
+					<p>Questa è la prima nota a piè di pagina. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+				</li>
+				<li id="fn:bignote">
+					<p>Eccone uno con diversi paragrafi e codice.</p>
+
+					<p>Rientra i paragrafi per includerli nella nota a piè di pagina.</p>
+
+					<p><code class="language-plaintext">{ il mio codice }</code></p>
+
+					<p>Aggiungi tutti i paragrafi che desideri. <a href="#fnref:bignote">&#8617;</a></p>
+				</li>
+			</ol>
+		</div>
+
+		<blockquote><b>NOTA</b>: il contenuto del piè di pagina può essere posizionato ovunque nel documento tranne che all'interno di altri elementi Markdown come tabelle, elenchi e blocchi di codice.</blockquote>
+
+		<blockquote><b>NOTA</b>: le note a piè di pagina saranno sempre numerate in sequenza, indipendentemente dagli identificatori che hai creato, una sequenza di note [^ 35], [^ yyyy] e [^ 102_444], sarà rappresentata come 1, 2 e 3.</blockquote>
+
+		<h2 id="markdown-title-id">Aggiunta di ID o Class agli elementi Markdown</h2>
+
+		<p>Quando creiamo tags in HTML, possiamo assegnare loro un'identificazione univoca e un'identificazione generica tramite i parametri <code class="lang-plaintext">id</code> e <code class="lang-plaintext">class</code>.</p>
+
+		<p>Esempio:</p>
+
+		<pre class="lang-html"><code>&lt;h2 id="special-title"&gt;&lt;/h2&gt;</code> & <code class="lang-html">&lt;p class="bg-blue"&gt;&lt;/p&gt;</code></pre>
+
+		<p>Con <code class="lang-plaintext">id</code> possiamo ottenere un riferimento specifico per un particolare elemento, normalmente il id dell'elemento è unico all'interno del tag HTML.</p>
+
+		<p class="mv-40">
+		    <ins class="adsbygoogle"
+		         style="display:block; text-align:center;"
+		         data-ad-layout="in-article"
+		         data-ad-format="fluid"
+		         data-ad-client="ca-pub-3427355473051563"
+		         data-ad-slot="3854885260"></ins>
+		    <script>
+		         (adsbygoogle = window.adsbygoogle || []).push({});
+		    </script>
+		</p>
+
+		<p>Il parametro <code class="lang-plaintext">class</code> è generico e può essere assegnato a più elementi.</p>
+
+		<p>La funzione di <code class="lang-plaintext">id</code> o <code class="lang-plaintext">class</code> è di permetterti di riconoscere facilmente questi elementi tramite JavaScript o CSS, usando questo <code class="lang-plaintext">id</code> o questo <code class="lang-plaintext">class</code> possiamo manipolare le proprietà come colore, dimensione, posizionamento, ecc.</p>
+
+		<p>Per aggiungere un <code class="lang-plaintext">id</code> o un <code class="lang-plaintext">class</code> a un elemento in Markdown parentesi graffe aperte <code class="lang-plaintext">{</code> subito dopo il contenuto dell'elemento, inserisci un cancelletto <code class="lang-plaintext">#</code> per indicare un <code class="lang-plaintext">id</code> o <code class="lang-plaintext">.</code> per indicare un <code class="lang-plaintext">class</code>, quindi l'identificatore stesso e, infine, chiudere le parentesi graffe <code class="lang-plaintext">}</code>.</p>
+
+		<p>Esempi:</p>
+
+		<pre class="lang-markdown"><code>### Il mio titolo {#identifier}
+
+Il mio paragrafo{.my-class}</code></pre>
+
+                  <p>Lo HTML ha questo aspetto:</p>
+
+                  <pre class="lang-html"><code>&lt;h3 id="identifier"&gt;Il mio titolo&lt;/h3&gt;
+
+&lt;p class=&quot;my-class&quot;&gt;Il mio paragrafo&lt;/p&gt;</code></pre>
+
+			<blockquote><b>NOTA</b>: Notare che non tutte le applicazioni Markdown supportano l'inserimento dei parametri <code class="lang-plaintext">id</code> o <code class="lang-plaintext">class</code>, è sempre importante consultare la documentazione del programma.</blockquote>
+
+		<h3 id="markdown-linking-to-id">Links per ids su Markdown</h3>
+
+		<p>Con la stessa sintassi standard per la creazione di links <code class="lang-plaintext">[] ()</code>, possiamo collegare un riferimento diretto a un id nel documento stesso.</p>
+
+		<p>All'interno delle parentesi dove mettiamo URL, inserisci il id dell'elemento preceduto dal cancelletto <code class="lang-plaintext">#</code>.</p>
+
+		<table class="table table-bordered responsive-table">
+			<thead class="thead-light">
+				<tr>
+					<th>Markdown</th>
+					<th>HTML</th>
+					<th>Resultado</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>[ID titolo](#markdown-title-id)</td>
+					<td>&lt;a href="#markdown-title-id"&gt;ID titolo&lt;/a&gt;</td>
+					<td><a href="#markdown-title-id">ID titolo</a></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p>Se <code class="lang-plaintext">id</code> è in un altro documento, la formattazione è simile, tuttavia, prima dell'identificazione, inserisci la pagina URL.</p>
+
+		<p>Esempio:</p>
+
+		<div class="code-example">
+	<pre class="lang-markdown"><code>[ID intestazione](https://markdown.net.br/sintaxe-estendida#markdown-title-id)</code></pre>
+	<a href="/editore/?markdown=[ID%20intestazione]%28https:%2F%2Fmarkdown%2Enet%2Ebr%2Fsintaxe%2Destendida%23markdown%2Dtitle%2Did%29" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+		<h2 id="markdown-definition-lists">Elenco delle definizioni</h2>
+
+		<p>Un elenco di definizioni in HTML è rappresentato da tags <code class="lang-plaintext">dl</code> e <code class="lang-plaintext">dt</code>. Questo elenco rappresenta i termini e le loro spiegazioni in modo concettuale.</p>
+
+		<p>Per creare un elenco di definizioni con Markdown, digitare il termine su una riga, premere il tasto <code class="lang-plaintext">Enter</code>, due punti, uno spazio vuoto e la definizione del termine.</p>
+
+		<p>Esempio:</p>
+
+		<pre class="lang-markdown"><code>Primo termine
+: Questa è la definizione del primo termine.
+
+Secondo termine
+: Questa è una definizione del secondo termine.
+: Questa è un'altra definizione del secondo termine.</code></pre>
+
+		<p>Lo HTML ha questo aspetto:</p>
+
+		<pre class="lang-html"><code>&lt;dl&gt;
+  &lt;dt&gt;Primo termine&lt;/dt&gt;
+  &lt;dd&gt;Questa è la definizione del primo termine.&lt;/dd&gt;
+  &lt;dt&gt;Secondo termine&lt;/dt&gt;
+  &lt;dd&gt;Questa è una definizione del secondo termine. &lt;/dd&gt;
+  &lt;dd&gt;Questa è un'altra definizione del secondo termine.&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+
+		<p>È il risultato:</p>
+
+		<dl>
+			<dt>Primo termine</dt>
+			<dd>Questa è la definizione del primo termine.</dd>
+			<dt>Secondo termine</dt>
+			<dd>Questa è una definizione del secondo termine. </dd>
+			<dd>Questa è un'altra definizione del secondo termine.</dd>
+		</dl>
+
+		<h2 id="markdown-strikethrough">Barrato in Markdown</h2>
+
+		<p>Il barrato viene utilizzato per correggere un errore in modo comparativo, di solito seguito da una correzione sulla stessa riga.</p>
+
+		<p>Il barrato non è altro che un formato che inserisce una linea orizzontale al centro di un contenuto.</p>
+
+		<p class="mv-40">
+		    <ins class="adsbygoogle"
+		         style="display:block; text-align:center;"
+		         data-ad-layout="in-article"
+		         data-ad-format="fluid"
+		         data-ad-client="ca-pub-3427355473051563"
+		         data-ad-slot="3854885260"></ins>
+		    <script>
+		         (adsbygoogle = window.adsbygoogle || []).push({});
+		    </script>
+		</p>
+
+		<p>Per colpire un contenuto in Markdown usa due tessere <code class="lang-plaintext">~~</code> prima e dopo il testo da formattare.</p>
+
+		<div class="code-example">
+	<pre class="lang-markdown"><code>Markdown è: ~~difficile~~ facile da imparare.</code></pre>
+	<a href="/editore/?markdown=Markdown%20%C3%A8:%20~~difficile~~%20facile%20da%20imparare%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+		<p>E il risultato è questo:</p>
+
+		<p>Markdown è: <del>difficile</del> facile da imparare.</p>
+
+		<h2 id="markdown-task-lists">Elenchi di attività in Markdown</h2>
+
+		<p>Un elenco di attività in Markdown consente all'utente di creare una sequenza di elementi con caselle di controllo alla loro sinistra utilizzando parentesi quadre <code class="lang-plaintext">[]</code>.</p>
+
+		<p>Dato che stiamo lavorando con una lista, è necessario far iniziare la riga dell'elemento con un trattino <code class="lang-plaintext">-</code>.</p>
+
+		<p>Per contrassegnare un'attività come completata, inserire una <code class="lang-plaintext">x</code> all'interno delle parentesi <code class="lang-plaintext">[x]</code>.</p>
+
+		<div class="code-example">
+	<pre class="lang-markdown"><code>- [x] Lorem ipsum dolor sit amet
+- [ ] Lorem consectetur adipisicing elit
+- [ ] Lorem ut labore et dfolore</code></pre>
+	<a href="/editore/?markdown=%2D%20[x]%20Lorem%20ipsum%20dolor%20sit%20amet%0D%0A%2D%20[%20]%20Lorem%20consectetur%20adipisicing%20elit%0D%0A%2D%20[%20]%20Lorem%20ut%20labore%20et%20dfolore" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+		<p>L'output renderizzato ha questo aspetto:</p>
+
+        <div class="image-container">
+            <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-task-list_w820.webp 820w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-task-list_w731.webp 731w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-task-list_w642.webp 642w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-task-list_w553.webp 553w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-task-list_w464.webp 464w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-task-list_w375.webp 375w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-task-list_w286.webp 286w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-task-list_w197.webp 197w"
+		         sizes="(max-width: 731px) 100vw, 731px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Tutorial su Markdown - Elenco delle attività in Markdown"
+		        	title="Tutorial su Markdown - Elenco delle attività in Markdown"
+		         	src="https://markdown.net.br/assets/img/extended-syntax/markdown-task-list_w820.png"
+		         	srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-task-list_w820.png 820w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-task-list_w731.png 731w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-task-list_w642.png 642w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-task-list_w553.png 553w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-task-list_w464.png 464w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-task-list_w375.png 375w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-task-list_w286.png 286w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-task-list_w197.png 197w"
+		         	sizes="(max-width: 731px) 100vw, 731px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/extended-syntax/markdown-task-list_w820.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Elenco delle attività in Markdown</span>
+		</figcaption>
+		</figure>
+        </div>
+
+		<h2 id="emojis">Inserimento di Emojis nel documento Markdown</h2>
+
+		<p>Sì, puoi inserire il famoso emoticons direttamente nel formato Markdown del tuo documento.</p>
+
+        <div class="image-container">
+            <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-emojis_w750.webp 750w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-emojis_w671.webp 671w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-emojis_w592.webp 592w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-emojis_w513.webp 513w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-emojis_w434.webp 434w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-emojis_w355.webp 355w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-emojis_w276.webp 276w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-emojis_w197.webp 197w"
+		         sizes="(max-width: 750px) 100vw, 750px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Tutorial Markdown - Emojis su Markdown"
+		        	title="Tutorial Markdown - Emojis su Markdown"
+		         	src="https://markdown.net.br/assets/img/extended-syntax/markdown-emojis_w750.png"
+		         	srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-emojis_w750.png 750w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-emojis_w671.png 671w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-emojis_w592.png 592w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-emojis_w513.png 513w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-emojis_w434.png 434w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-emojis_w355.png 355w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-emojis_w276.png 276w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-emojis_w197.png 197w"
+		         	sizes="(max-width: 750px) 100vw, 750px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/extended-syntax/markdown-emojis_w750.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Emojis su Markdown</span>
+		</figcaption>
+		</figure>
+        </div>
+
+		<p>Esistono due modi più comunemente usati per l'attività, copiare e incollare l'emoji nel contenuto o inserire i codici emoji.</p>
+
+		<p>Capiremo meglio come funzionano le due procedure, ma prima, <a href="/editor/" target="_blank">clicca qui</a> per aprire il nostro editor Markdown e testare Emojis in tempo reale.</p>
+
+		<h3 id="emojis-copy-and-paste">Copiare e incollare Emojis in Markdown</h3>
+
+        <p><b>Step 1</b> - Apri questa pagina <a href="https://emojipedia.org/grinning-face-with-big-eyes/" target="_blank">Emojipedia</a> che contiene un emoticon sorridente e fai clic sul pulsante <code class="lang-text">Copy</code>.</p>
+
+        <div class="image-container">
+            <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-1_w1017.webp 1017w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-1_w900.webp 900w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-1_w783.webp 783w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-1_w666.webp 666w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-1_w549.webp 549w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-1_w432.webp 432w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-1_w315.webp 315w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-1_w198.webp 198w"
+		         sizes="(max-width: 666px) 100vw, 666px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Tutorial su Markdown - Copia di Emojis in Markdown Parte 1"
+		        	title="Tutorial su Markdown - Copia di Emojis in Markdown Parte 1"
+		         	src="https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-1_w1017.png"
+		         	srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-1_w1017.png 1017w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-1_w900.png 900w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-1_w783.png 783w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-1_w666.png 666w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-1_w549.png 549w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-1_w432.png 432w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-1_w315.png 315w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-1_w198.png 198w"
+		         	sizes="(max-width: 666px) 100vw, 666px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-1_w1017.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			
+		</figure>
+        </div>
+
+        <p><b>Step 2</b> - Torna al nostro editor Markdown, fai clic sul pannello di sinistra e premi <code class="lang-text">CTRL + V</code> per incollare.</p>
+
+        <div class="image-container">
+            <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-2_w686.webp 686w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-2_w617.webp 617w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-2_w548.webp 548w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-2_w479.webp 479w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-2_w410.webp 410w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-2_w341.webp 341w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-2_w272.webp 272w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-2_w203.webp 203w"
+		         sizes="(max-width: 686px) 100vw, 686px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Tutorial su Markdown - Copia di Emojis in Markdown Parte 2"
+		        	title="Tutorial su Markdown - Copia di Emojis in Markdown Parte 2"
+		         	src="https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-2_w686.png"
+		         	srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-2_w686.png 686w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-2_w617.png 617w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-2_w548.png 548w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-2_w479.png 479w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-2_w410.png 410w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-2_w341.png 341w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-2_w272.png 272w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-2_w203.png 203w"
+		         	sizes="(max-width: 686px) 100vw, 686px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-2_w686.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			
+		</figure>
+        </div>
+
+        <blockquote><b>NOTA</b>: Puoi esplorare <a href="https://emojipedia.org/" target="_blank">Emojipedia</a> per trovare le tue emoji preferite, la procedura di copia e incolla è la stessa per tutte.</blockquote>
+
+		<p>Se la tua applicazione Markdown è compatibile, vedrai la rappresentazione di emoticon direttamente nel testo.</p>
+		<p>Quando si converte il documento Markdown in HTML o anche in PDF, gli emoji vengono comunque rappresentati correttamente.</p>
+		<blockquote><b>NOTA</b>: se il documento HTML non riproduce gli emoji come dovrebbe, codifica le pagine in UTF-8.</blockquote>
+
+
+		<h3 id="emojis-access-code">Utilizzo dei codici di accesso Emoji</h3>
+
+		<p>Un codice emoji si forma identificando il emoticon circondato da due punti.</p>
+
+		<div class="code-example">
+	<pre class="lang-markdown"><code>Sono andato in campeggio! :tent: Tornerò presto.
+
+È così divertente! :joy:</code></pre>
+	<a href="/editore/?markdown=Sono%20andato%20in%20campeggio%21%20:tent:%20Torner%C3%B2%20presto%2E%0D%0A%0D%0A%C3%88%20cos%C3%AC%20divertente%21%20:joy:" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+		<p>L'output renderizzato ha questo aspetto:</p>
+
+		<p>Sono andato in campeggio! ⛺ Tornerò presto.</p>
+
+		<p>È così divertente! 😂</p>
+
+        <h3 id="emoji-discovering-access-code">Alla scoperta del codice di accesso Emojis</h3>
+
+        <p>Se non conosci il codice di accesso emoji, usa il nostro editor Markdown per scoprirlo.</p>
+
+        <p><b>Step 1</b> - <a href="/editor/" target="_blank">Clicca qui</a> per aprire Markeditor.</p>
+
+        <p><b>Passaggio 2</b> - Fare clic sul pulsante di inserimento Emojis sulla barra degli strumenti.</p>
+
+        <div class="image-container">
+            <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-1_w594.webp 594w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-1_w495.webp 495w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-1_w396.webp 396w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-1_w297.webp 297w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-1_w198.webp 198w"
+		         sizes="(max-width: 594px) 100vw, 594px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Tutorial su Markdown - Alla scoperta del codice Emoji in Markdown parte 1"
+		        	title="Tutorial su Markdown - Alla scoperta del codice Emoji in Markdown parte 1"
+		         	src="https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-1_w594.png"
+		         	srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-1_w594.png 594w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-1_w495.png 495w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-1_w396.png 396w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-1_w297.png 297w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-1_w198.png 198w"
+		         	sizes="(max-width: 594px) 100vw, 594px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-1_w594.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			
+		</figure>
+        </div>
+
+        <p><b>Passaggio 3</b> - Nella finestra di selezione di Emoji:</p>
+        <ol>
+            <li>Scegli la fonte da cui desideri ottenere il file Emojis.</li>
+            <li>Fare clic sul Emoji che verrà inserito nel documento (è possibile fare clic su diversi Emojis nella stessa finestra).</li>
+            <li>Premere il pulsante di conferma per inserire il codice di accesso per le immagini nel testo.</li>
+        </ol>
+
+        <div class="image-container">
+            <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-2_w825.webp 825w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-2_w736.webp 736w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-2_w647.webp 647w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-2_w558.webp 558w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-2_w469.webp 469w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-2_w380.webp 380w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-2_w291.webp 291w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-2_w202.webp 202w"
+		         sizes="(max-width: 736px) 100vw, 736px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Tutorial su Markdown - Alla scoperta del codice Emoji in Markdown parte 2"
+		        	title="Tutorial su Markdown - Alla scoperta del codice Emoji in Markdown parte 2"
+		         	src="https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-2_w825.png"
+		         	srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-2_w825.png 825w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-2_w736.png 736w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-2_w647.png 647w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-2_w558.png 558w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-2_w469.png 469w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-2_w380.png 380w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-2_w291.png 291w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-2_w202.png 202w"
+		         	sizes="(max-width: 736px) 100vw, 736px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-2_w825.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			
+		</figure>
+        </div>
+
+        <p>Nel pannello di sinistra è possibile visualizzare i codici per Emojis e nel pannello di destra il rendering.</p>
+
+        <div class="image-container">
+            <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-3_w849.webp 849w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-3_w756.webp 756w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-3_w663.webp 663w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-3_w570.webp 570w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-3_w477.webp 477w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-3_w384.webp 384w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-3_w291.webp 291w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-3_w198.webp 198w"
+		         sizes="(max-width: 756px) 100vw, 756px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Tutorial su Markdown - Alla scoperta del codice Emoji in Markdown parte 3"
+		        	title="Tutorial su Markdown - Alla scoperta del codice Emoji in Markdown parte 3"
+		         	src="https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-3_w849.png"
+		         	srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-3_w849.png 849w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-3_w756.png 756w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-3_w663.png 663w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-3_w570.png 570w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-3_w477.png 477w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-3_w384.png 384w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-3_w291.png 291w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-3_w198.png 198w"
+		         	sizes="(max-width: 756px) 100vw, 756px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-3_w849.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			
+		</figure>
+        </div>
+
+		<blockquote><b>NOTA</b>: Le immagini di emoticons possono variare notevolmente da applicazione a applicazione, <a href="https://gist.github.com/rxaviers/7360908" target="_blank">in questo elenco</a> trovi gli emoji compatibili con Markdown usati da GitHub, puoi testarli nella tua applicazione per scoprire se ci sono sono compatibilità.</blockquote>
+
+
+		<h2 id="markdown-auto-link">Link automatico da URL in Markdown</h2>
+
+		<p>Alcuni processori Markdown trasformano URL in links quando trovano un indirizzo compreso tra i segni minore di <code class="lang-plaintext"><</code> e maggiore di <code class="lang-plaintext">></code>.</p>
+
+		<p>Esempio:</p>
+
+		<div class="code-example">
+	<pre class="lang-markdown"><code>&lt;https://markdown.net.br&gt;</code></pre>
+	<a href="/editore/?markdown=<https:%2F%2Fmarkdown%2Enet%2Ebr>" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+		<p>Em outras ocasiões, embutir o endereço entre <code class="lang-plaintext">&lt;&gt;</code> é dispensável, ou seja, basta inserir a URL no próprio documento que o aplicativo fará a conversão automaticamente.</p>
+
+		<p>Esempio:</p>
+
+		<div class="code-example">
+	<pre class="lang-markdown"><code>https://markdown.net.br</code></pre>
+	<a href="/editore/?markdown=https:%2F%2Fmarkdown%2Enet%2Ebr" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+		<p>L'output renderizzato ha questo aspetto:</p>
+
+		<p><a href="https://markdown.net.br" target="_blank">https://markdown.net.br</a></p>
+
+		<h2 id="markdown-disable-auto-link">Disabilitazione del collegamento automatico di URL</h2>
+
+		<p>Se si desidera solo rappresentare un URL in un documento e impedire all'applicazione di convertirlo automaticamente in un link, racchiudere l'indirizzo tra virgolette <code class="lang-plaintext">` `</code>.</p>
+
+		<div class="code-example">
+	<pre class="lang-markdown"><code>`https://markdown.net.br`</code></pre>
+	<a href="/editore/?markdown=`https:%2F%2Fmarkdown%2Enet%2Ebr`" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+		<p>L'output renderizzato ha questo aspetto:</p>
+
+		<pre class="lang-plaintext"><code>https://markdown.net.br</code></pre>
+
+		<blockquote><b>NOTA</b>: vale la pena ricordare che l'uso di virgolette per racchiudere il contenuto lo trasforma in codice.</blockquote>
+	</div>
+</div>
+            <div class="col-12">
+  <ul class="collapsible">
+    <li class="active">
+      <div class="collapsible-header grey lighten-4"><i class="material-icons">share</i>Condividere</div>
+      <div class="collapsible-body">
+        <div class="collection">
+          <a href="#!" class="collection-item" data-sharer="twitter" data-title="Markdown® Advanced: sintassi, utilizzo ed esempi [passo dopo passo]" data-hashtags="markdown" data-url="https://it.markdown.net.br/sintassi-estesa/">
+            <i class="fab fa-twitter color-twitter"></i>&nbsp;&nbsp;Condividi su Twitter
+          </a>
+          <a href="#!" class="collection-item" data-sharer="facebook" data-hashtag="markdown" data-url="https://it.markdown.net.br/sintassi-estesa/">
+            <i class="fab fa-facebook color-facebook"></i>&nbsp;&nbsp;Condividi su Facebook
+          </a>
+          <a href="#!" class="collection-item" data-sharer="linkedin" data-url="https://it.markdown.net.br/sintassi-estesa/">
+            <i class="fab fa-linkedin color-linkedin"></i>&nbsp;&nbsp;Condividi su Linkedin
+          </a>
+          <a href="#!" class="collection-item" data-sharer="email" data-title="Markdown® Advanced: sintassi, utilizzo ed esempi [passo dopo passo]" data-url="https://it.markdown.net.br/sintassi-estesa/" data-subject="Ciao! Va bene? Ho trovato questa guida Markdown molto facile da seguire, dai un'occhiata quando puoi. Spero sia utile, ci vediamo più tardi." data-to="email@host.com">
+            <i class="fas fa-envelope color-email"></i>&nbsp;&nbsp;Condividi tramite e-mail
+          </a>
+          <a href="#!" class="collection-item" data-sharer="whatsapp" data-title="Markdown® Advanced: sintassi, utilizzo ed esempi [passo dopo passo]" data-url="https://it.markdown.net.br/sintassi-estesa/">
+            <i class="fab fa-whatsapp color-whatsapp"></i>&nbsp;&nbsp;Condividi tramite Whatsapp
+          </a>
+          <a href="#!" class="collection-item" data-sharer="telegram" data-title="Markdown® Advanced: sintassi, utilizzo ed esempi [passo dopo passo]" data-url="https://it.markdown.net.br/sintassi-estesa/" data-to="(00) 99999-9999">
+            <i class="fab fa-telegram color-telegram"></i>&nbsp;&nbsp;Condividi tramite Telegram
+          </a>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+          </div>
+          <!-- Table of contents -->
+          <div class="col hide-on-small-only m3 xl3 offset-xl1">
+            <div class="toc-wrapper" id="sticky-navigator">
+            </div>
+          </div>
+          <!-- Table of contents -->
+        </div>
+      </div>
+    </main>
+    <footer class="page-footer docs-footer">
+  <div class="container">
+    <div class="row" style="margin-bottom: 0;">
+      <div class="col s12 m10 offset-m1">
+        <div class="row">
+          <div class="col l4 s12" style="overflow: hidden;">
+            <a href="https://twitter.com/CodigoNetwork" class="twitter-follow-button" data-show-count="true" data-size="large" data-dnt="true">Seguire @CodigoNetwork</a>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div>
+            &copy;&nbsp;<noscript>2020</noscript><script type="text/javascript">document.write(new Date().getFullYear());</script> <strong>Markdown</strong>, Tutti i diritti riservati.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+    <!--  Scripts-->
+    <script src="/assets/js/bundle.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/show-invisibles/prism-show-invisibles.min.js" integrity="sha256-1baFoczEXwdtWBiZ6gbu7W1kn6XfPgKY4LkQQYNHTkM=" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/components/prism-asciidoc.min.js" integrity="sha256-Z6qgXS53J00CrN9qHl3CxGqX2A3qs6HwGi96bnk2e4w=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/components/prism-markdown.min.js" integrity="sha256-LVbOCHxYsNr9pF5KGdB2NphtO2FKM92SGFxRkWc9Ovg=" crossorigin="anonymous"></script>
+    <script src="/assets/js/search.min.js"></script>
+
+    <script src="/assets/js/vendor/jquery.lazy@1.7.9/jquery.lazy.min.js"></script>
+    <script src="/assets/js/vendor/jquery.lazy@1.7.9/jquery.lazy.youtube.min.js"></script>
+    <script src="/assets/js/vendor/jquery.lazy@1.7.9/jquery.lazy.picture.min.js"></script>
+    <!-- Lightbox das imagens -->
+    <script>
+      $(document).ready(function(){
+         $('.materialboxed').materialbox();
+
+         $('picture.lazy-img.unloaded, img.lazy-img, iframe.lazy-yt.unloaded').Lazy({
+             effect: 'fadeIn',
+             effectTime: 1000
+             // called after an element was successfully handled
+             // afterLoad: function(element) {
+             // // Remove a animação do loader da imagem
+             //     // element.height(element.closest('.img-lazy-container').find('.image-placeholder').height());
+
+             //     element.removeClass('unloaded');
+             // }
+         });
+       });
+      anchors.add("h2, h3, h5");
+      $('#sticky-navigator').stickyNavigator();
+    </script>
+    <!-- Twitter Button -->
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </body>
+</html>

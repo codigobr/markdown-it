@@ -1,0 +1,468 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-69958365-6"></script>
+    <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-69958365-6');
+    </script>
+    <!-- Auto ads - Google -->
+    <script data-ad-client="ca-pub-3427355473051563" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="canonical" href="https://it.markdown.net.br/cheatsheet/">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="author" content="Robert Salles">
+    <meta name="description" content="La guida di cui ogni programmatore ha bisogno con il riferimento completo e rapido alla sintassi di Markdown, usa questo cheatsheet per creare intestazioni / titoli, paragrafi, elenchi e altro.">
+    <meta name="twitter:card" content="summary">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://it.markdown.net.br/cheatsheet/">
+    <meta property="og:title" content="Markdown™ Cheatsheet: Guida rapida per programmatori">
+    <meta property="og:description" content="La guida di cui ogni programmatore ha bisogno con il riferimento completo e rapido alla sintassi di Markdown, usa questo cheatsheet per creare intestazioni / titoli, paragrafi, elenchi e altro.">
+    <meta property="og:image" content="https://markdown.net.br/assets/img/markdown.jpg">
+
+    <title>Markdown™ Cheatsheet: Guida rapida per programmatori</title>
+    <!-- Favicons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2196f3">
+    <meta name="msapplication-TileColor" content="#2196f3">
+    <!--  Android 5 Chrome Color-->
+    <meta name="theme-color" content="#2196f3">
+    <!-- CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/show-invisibles/prism-show-invisibles.min.css" integrity="sha256-nOfkEPu/TzBvIxN8D/vW8weOUczzDbxRjgik/hA2hBI=" crossorigin="anonymous" />
+    <style type="text/css">
+    	.mv-40 {
+    		margin-top: 40px;
+    		margin-bottom: 40px;
+    	}
+
+    	img[src=""],
+    	img:not([src]) {
+    	  visibility: hidden;
+    	}
+
+    	.caption {
+    	    display: flex;
+    	    justify-content: center;
+    	    align-items: center;
+    	    margin: 10px 0;
+    	    color: hsl(0deg 0% 33%);
+    	    font-style: italic;
+    	    font-size: 75%;
+    	}
+
+    	picture {
+    		display: block;
+    		position: relative;
+    	}
+
+    	.cover-link {
+    		position: absolute;
+    		top: 0;
+    		bottom: 0;
+    		left: 0;
+    		right: 0;
+    	}
+    </style>
+  </head>
+  <body class="themes" cz-shortcut-listen="true">
+    <header>
+      <div class="container">
+  <a href="#" data-target="nav-mobile" class="top-nav sidenav-trigger waves-effect waves-light circle">
+  <i class="material-icons">menu</i>
+  </a>
+</div>
+<ul id="nav-mobile" class="sidenav">
+  <li class="logo blue">
+    <a id="logo-container" href="/" class="brand-logo">
+    <img src="https://markdown.net.br/assets/img/markdown-logo-transparent.svg" height="100">
+    </a>
+  </li>
+  <li class="push-it-down"></li>
+  <li class="search white">
+    <div class="search-wrapper">
+      <input id="search" placeholder="Ricerca"><i class="material-icons">search</i>
+      <div class="search-results"></div>
+    </div>
+  </li>
+  <li class="bold white">
+    <a href="/introduzione/" class="waves-effect waves-blue"><i class="tiny material-icons">child_care</i>Introduzione</a>
+  </li>
+  <li class="bold white">
+    <a href="/sintassi-di-base/" class="waves-effect waves-blue"><i class="tiny material-icons">short_text</i>Sintassi di base</a>
+  </li>
+  <li class="bold white">
+    <a href="/sintassi-estesa/" class="waves-effect waves-blue"><i class="tiny material-icons">format_align_left</i>Sintassi estesa</a>
+  </li>
+  <li class="bold white">
+    <a href="/cheatsheet/" class="waves-effect waves-blue"><i class="tiny material-icons">help_outline</i>Riferimento rapido</a>
+  </li>
+  <li class="bold white">
+    <a href="/software/" class="waves-effect waves-blue"><i class="tiny material-icons">card_travel</i>Software</a>
+  </li>
+</ul>
+    </header>
+    <main>
+      <div class="section" id="index-banner">
+        <div class="container">
+          <div class="row" style="margin-bottom: 0;">
+            <div class="col s12 m6 l7 offset-m1 offset-l1">
+              <h1>Markdown Cheatsheet</h1>
+              <h4 class="light">Guida di riferimento rapido essenziale per ogni programmatore che lavora con Markdown.</h4>
+              <ol class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope
+                    itemtype="https://schema.org/ListItem">
+                  <a itemprop="item" href="/">
+                      <span itemprop="name">Markdown</span></a>
+                  <meta itemprop="position" content="1" />
+                </li>
+                <li>
+<i class="fas fa-chevron-right chevron-separator"></i>
+</li>
+<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+<span itemprop="name">Markdown Cheatsheet</span>
+<meta itemprop="position" content="2" />
+</li>
+
+              </ol>
+            </div>
+            <div class="col s12 m5 l4 mt-s-30" align="center">
+            	<!-- square-fixed-300-250 -->
+            	<ins class="adsbygoogle"
+            	     style="display:inline-block;width:300px;height:250px"
+            	     data-ad-client="ca-pub-3427355473051563"
+            	     data-ad-slot="1035906960"></ins>
+            	<script>
+            	     (adsbygoogle = window.adsbygoogle || []).push({});
+            	</script>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <!--  Outer row  -->
+        <div class="row">
+          <div class="section col s12 m8 offset-m1 xl7 offset-xl1">
+            <div class="row scrollspy">
+  <div class="col s12">
+    <h2 id="visao-geral">Panoramica</h2>
+
+    <p>Hai bisogno di rinfrescare la tua memoria riguardo alla sintassi di Markdown? Eccellente!</p>
+
+    <p>Di seguito sono elencati gli elementi più comuni e utilizzati della lingua.</p>
+
+    <p class="mv-40">
+        <ins class="adsbygoogle"
+             style="display:block; text-align:center;"
+             data-ad-layout="in-article"
+             data-ad-format="fluid"
+             data-ad-client="ca-pub-3427355473051563"
+             data-ad-slot="3854885260"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </p>
+
+	<p>Vale la pena ricordare che, qui vengono presentate solo le basi di Markdown, se hai bisogno di maggiori informazioni, vedi le sezioni di <a href="/sintassi-di-base/" target="_blank">sintassi di base</a> e <a href="/sintassi-estesa/" target="_blank">sintassi estesa</a>.</p>
+
+    <h2 id="sintaxe-basica">Sintassi di base</h2>
+
+    <p>Gli elementi che stanno alla base di Markdown sono mostrati di seguito. Questi elementi di formattazione sono stati descritti nel documento in lingua originale e la stragrande maggioranza dei programmi li supporta.</p>
+
+    <table class="striped responsive-table">
+      <thead>
+        <tr>
+          <th>Elemento</th>
+          <th>Markdown</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="/sintassi-di-base/#headings" target="_blank">Titoli</a></td>
+          <td><div class="code-example">
+	<pre class="lang-markdown"><code># H1
+## H2
+### H3</code></pre>
+	<a href="/editore/?markdown=%23%20H1%0D%0A%23%23%20H2%0D%0A%23%23%23%20H3" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div></td>
+        </tr>
+        <tr>
+          <td><a href="/sintassi-di-base/#bold" target="_blank">Grassetto</a></td>
+          <td><div class="code-example">
+	<pre class="lang-markdown"><code>**testo grassetto**</code></pre>
+	<a href="/editore/?markdown=%2A%2Atesto%20grassetto%2A%2A" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div></td>
+        </tr>
+        <tr>
+          <td><a href="/sintassi-di-base/#italics" target="_blank">Corsivo</a></td>
+          <td><div class="code-example">
+	<pre class="lang-markdown"><code>*testo in corsivo*</code></pre>
+	<a href="/editore/?markdown=%2Atesto%20in%20corsivo%2A" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div></td>
+        </tr>
+        <tr>
+          <td><a href="/sintassi-di-base/#blockquote" target="_blank">Blockquote</a></td>
+          <td><div class="code-example">
+	<pre class="lang-markdown"><code>&gt; Blockquote</code></pre>
+	<a href="/editore/?markdown=>%20Blockquote" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div></td>
+        </tr>
+        <tr>
+          <td><a href="/sintassi-di-base/#lists-ordered" target="_blank">Lista ordinata</a></td>
+          <td><div class="code-example">
+	<pre class="lang-markdown"><code>1. Primo elemento
+2. Secondo elemento
+3. Terzo elemento</code></pre>
+	<a href="/editore/?markdown=1%2E%20Primo%20elemento%0D%0A2%2E%20Secondo%20elemento%0D%0A3%2E%20Terzo%20elemento" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div></td>
+        </tr>
+        <tr>
+          <td><a href="/sintassi-di-base/#lists-unordered" target="_blank">Lista non ordinata</a></td>
+          <td>
+            <div class="code-example">
+	<pre class="lang-markdown"><code>- Primo elemento
+- Secondo elemento
+- Terzo elemento</code></pre>
+	<a href="/editore/?markdown=%2D%20Primo%20elemento%0D%0A%2D%20Secondo%20elemento%0D%0A%2D%20Terzo%20elemento" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+          </td>
+        </tr>
+        <tr>
+          <td><a href="/sintassi-di-base/#code" target="_blank">Codice</a></td>
+          <td><div class="code-example">
+	<pre class="lang-markdown"><code>`codice`</code></pre>
+	<a href="/editore/?markdown=`codice`" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div></td>
+        </tr>
+        <tr>
+          <td><a href="/sintassi-di-base/#horizontal-rule" target="_blank">Linea orizzontale</a></td>
+          <td><div class="code-example">
+	<pre class="lang-markdown"><code>---</code></pre>
+	<a href="/editore/?markdown=%2D%2D%2D" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div></td>
+        </tr>
+        <tr>
+          <td><a href="/sintassi-di-base/#links" target="_blank">Link</a></td>
+          <td><div class="code-example">
+	<pre class="lang-markdown"><code>[titolo](https://markdown.net.br)</code></pre>
+	<a href="/editore/?markdown=[titolo]%28https:%2F%2Fmarkdown%2Enet%2Ebr%29" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div></td>
+        </tr>
+        <tr>
+          <td><a href="/sintassi-di-base/#images" target="_blank">Immagine</a></td>
+          <td><div class="code-example">
+	<pre class="lang-markdown"><code>![testo alternativo](https://markdown.net.br/assets/img/basic-syntax/markdown-logo-small.png)</code></pre>
+	<a href="/editore/?markdown=%21[testo%20alternativo]%28https:%2F%2Fmarkdown%2Enet%2Ebr%2Fassets%2Fimg%2Fbasic%2Dsyntax%2Fmarkdown%2Dlogo%2Dsmall%2Epng%29" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="sintaxe-estendida">Sintassi estesa</h2>
+
+    <p>Con l'evoluzione di Markdown sono stati implementati altri elementi, arricchendo la gamma di opzioni per la formattazione dei documenti. Da un lato, un po 'più di complessità, ma dall'altro il linguaggio ha guadagnato più risorse per la costruzione di diversi documenti.</p>
+
+    <p>Tieni presente che non tutte le applicazioni sviluppate per Markdown supportano questi elementi, è sempre una buona idea consultare la documentazione del programma o la sezione "<a href="//" target="_blank"></a>strumenti".</p>
+
+    <table class="striped responsive-table">
+      <thead>
+        <tr>
+          <th>Elemento</th>
+          <th>Markdown</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="/sintassi-estesa/#markdown-tables" target="_blank">tavolo</a></td>
+          <td>
+          	<div class="code-example">
+	<pre class="lang-markdown"><code>| Titolo  | Titolo |
+| --------| ------ |
+| Testo   | Testo  |
+| Testo | Testo  |</code></pre>
+	<a href="/editore/?markdown=|%20Titolo%20%20|%20Titolo%20|%0D%0A|%20%2D%2D%2D%2D%2D%2D%2D%2D|%20%2D%2D%2D%2D%2D%2D%20|%0D%0A|%20Testo%20%20%20|%20Testo%20%20|%0D%0A|%20Testo%20|%20Testo%20%20|" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div></td>
+        </tr>
+        <tr>
+          <td><a href="/sintassi-estesa/#fenced-code-block" target="_blank">Blocco di codice recintato</a></td>
+          <td>
+          	<div class="code-example">
+	<pre class="lang-markdown"><code>```
+{
+    "Nome": "Robert",
+    "cognome": "Salles",
+    "età": 25
+}
+```</code></pre>
+	<a href="/editore/?markdown=```%0D%0A{%0D%0A%20%20%20%20%22Nome%22:%20%22Robert%22%2C%0D%0A%20%20%20%20%22cognome%22:%20%22Salles%22%2C%0D%0A%20%20%20%20%22et%C3%A0%22:%2025%0D%0A}%0D%0A```" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+      		</td>
+        </tr>
+        <tr>
+          <td><a href="/sintassi-estesa/#markdown-footnotes" target="_blank">Nota</a></td>
+          <td>
+          	<pre class="lang-markdown"><code>Ecco una frase con una nota a piè di pagina. [^1]
+
+[^1]: Questa è la nota a piè di pagina.</code></pre>
+      		</td>
+        </tr>
+        <tr>
+          <td><a href="/sintassi-estesa/#markdown-title-id" target="_blank">titolo ID</a></td>
+          <td><pre class="lang-markdown"><code>### Il mio titolo {#id}</code></pre></td>
+        </tr>
+        <tr>
+          <td><a href="/sintassi-estesa/#markdown-definition-lists" target="_blank">Elenco delle definizioni</a></td>
+          <td>
+          	<pre class="lang-markdown"><code>termine
+: definizione</code></pre>
+      		</td>
+        </tr>
+        <tr>
+          <td><a href="/sintassi-estesa/#markdown-strikethrough" target="_blank">Barrato</a></td>
+          <td><div class="code-example">
+	<pre class="lang-markdown"><code>~~Markdown è difficile da imparare.~~</code></pre>
+	<a href="/editore/?markdown=~~Markdown%20%C3%A8%20difficile%20da%20imparare%2E~~" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div></td>
+        </tr>
+        <tr>
+          <td><a href="/sintassi-estesa/#markdown-task-lists" target="_blank">Elenco delle attività</a></td>
+          <td>
+          	<div class="code-example">
+	<pre class="lang-markdown"><code>- [x] Pulire la camera da letto
+- [ ] Cammina per 30 minuti
+- [ ] Aggiorna il sito</code></pre>
+	<a href="/editore/?markdown=%2D%20[x]%20Pulire%20la%20camera%20da%20letto%0D%0A%2D%20[%20]%20Cammina%20per%2030%20minuti%0D%0A%2D%20[%20]%20Aggiorna%20il%20sito" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+      		</td>
+        </tr>
+      </tbody>
+    </table>
+  </div> <!-- FIM DO CONTEÚDO PRINCIPAL -->
+</div>
+            <div class="col-12">
+  <ul class="collapsible">
+    <li class="active">
+      <div class="collapsible-header grey lighten-4"><i class="material-icons">share</i>Condividere</div>
+      <div class="collapsible-body">
+        <div class="collection">
+          <a href="#!" class="collection-item" data-sharer="twitter" data-title="Markdown™ Cheatsheet: Guida rapida per programmatori" data-hashtags="markdown" data-url="https://it.markdown.net.br/cheatsheet/">
+            <i class="fab fa-twitter color-twitter"></i>&nbsp;&nbsp;Condividi su Twitter
+          </a>
+          <a href="#!" class="collection-item" data-sharer="facebook" data-hashtag="markdown" data-url="https://it.markdown.net.br/cheatsheet/">
+            <i class="fab fa-facebook color-facebook"></i>&nbsp;&nbsp;Condividi su Facebook
+          </a>
+          <a href="#!" class="collection-item" data-sharer="linkedin" data-url="https://it.markdown.net.br/cheatsheet/">
+            <i class="fab fa-linkedin color-linkedin"></i>&nbsp;&nbsp;Condividi su Linkedin
+          </a>
+          <a href="#!" class="collection-item" data-sharer="email" data-title="Markdown™ Cheatsheet: Guida rapida per programmatori" data-url="https://it.markdown.net.br/cheatsheet/" data-subject="Ciao! Va bene? Ho trovato questa guida Markdown molto facile da seguire, dai un'occhiata quando puoi. Spero sia utile, ci vediamo più tardi." data-to="email@host.com">
+            <i class="fas fa-envelope color-email"></i>&nbsp;&nbsp;Condividi tramite e-mail
+          </a>
+          <a href="#!" class="collection-item" data-sharer="whatsapp" data-title="Markdown™ Cheatsheet: Guida rapida per programmatori" data-url="https://it.markdown.net.br/cheatsheet/">
+            <i class="fab fa-whatsapp color-whatsapp"></i>&nbsp;&nbsp;Condividi tramite Whatsapp
+          </a>
+          <a href="#!" class="collection-item" data-sharer="telegram" data-title="Markdown™ Cheatsheet: Guida rapida per programmatori" data-url="https://it.markdown.net.br/cheatsheet/" data-to="(00) 99999-9999">
+            <i class="fab fa-telegram color-telegram"></i>&nbsp;&nbsp;Condividi tramite Telegram
+          </a>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+          </div>
+          <!-- Table of contents -->
+          <div class="col hide-on-small-only m3 xl3 offset-xl1">
+            <div class="toc-wrapper" id="sticky-navigator">
+            </div>
+          </div>
+          <!-- Table of contents -->
+        </div>
+      </div>
+    </main>
+    <footer class="page-footer docs-footer">
+  <div class="container">
+    <div class="row" style="margin-bottom: 0;">
+      <div class="col s12 m10 offset-m1">
+        <div class="row">
+          <div class="col l4 s12" style="overflow: hidden;">
+            <a href="https://twitter.com/CodigoNetwork" class="twitter-follow-button" data-show-count="true" data-size="large" data-dnt="true">Seguire @CodigoNetwork</a>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div>
+            &copy;&nbsp;<noscript>2020</noscript><script type="text/javascript">document.write(new Date().getFullYear());</script> <strong>Markdown</strong>, Tutti i diritti riservati.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+    <!--  Scripts-->
+    <script src="/assets/js/bundle.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/show-invisibles/prism-show-invisibles.min.js" integrity="sha256-1baFoczEXwdtWBiZ6gbu7W1kn6XfPgKY4LkQQYNHTkM=" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/components/prism-asciidoc.min.js" integrity="sha256-Z6qgXS53J00CrN9qHl3CxGqX2A3qs6HwGi96bnk2e4w=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/components/prism-markdown.min.js" integrity="sha256-LVbOCHxYsNr9pF5KGdB2NphtO2FKM92SGFxRkWc9Ovg=" crossorigin="anonymous"></script>
+    <script src="/assets/js/search.min.js"></script>
+
+    <script src="/assets/js/vendor/jquery.lazy@1.7.9/jquery.lazy.min.js"></script>
+    <script src="/assets/js/vendor/jquery.lazy@1.7.9/jquery.lazy.youtube.min.js"></script>
+    <script src="/assets/js/vendor/jquery.lazy@1.7.9/jquery.lazy.picture.min.js"></script>
+    <!-- Lightbox das imagens -->
+    <script>
+      $(document).ready(function(){
+         $('.materialboxed').materialbox();
+
+         $('picture.lazy-img.unloaded, img.lazy-img, iframe.lazy-yt.unloaded').Lazy({
+             effect: 'fadeIn',
+             effectTime: 1000
+             // called after an element was successfully handled
+             // afterLoad: function(element) {
+             // // Remove a animação do loader da imagem
+             //     // element.height(element.closest('.img-lazy-container').find('.image-placeholder').height());
+
+             //     element.removeClass('unloaded');
+             // }
+         });
+       });
+      anchors.add("h2, h3, h5");
+      $('#sticky-navigator').stickyNavigator();
+    </script>
+    <!-- Twitter Button -->
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </body>
+</html>

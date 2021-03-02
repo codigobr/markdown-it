@@ -1,0 +1,2683 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-69958365-6"></script>
+    <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-69958365-6');
+    </script>
+    <!-- Auto ads - Google -->
+    <script data-ad-client="ca-pub-3427355473051563" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="canonical" href="https://it.markdown.net.br/sintassi-di-base/">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="author" content="Robert Salles">
+    <meta name="description" content="Come formattare titoli / intestazioni, paragrafi, elenchi e altro. La guida Markdown essenziale per ogni programmatore. ✓ Facile ✓ Semplice e ✓ Veloce.">
+    <meta name="twitter:card" content="summary">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://it.markdown.net.br/sintassi-di-base/">
+    <meta property="og:title" content="Nozioni di base su Markdown®: sintassi, utilizzo ed esempi [passo dopo passo]">
+    <meta property="og:description" content="Come formattare titoli / intestazioni, paragrafi, elenchi e altro. La guida Markdown essenziale per ogni programmatore. ✓ Facile ✓ Semplice e ✓ Veloce.">
+    <meta property="og:image" content="https://markdown.net.br/assets/img/markdown.jpg">
+
+    <title>Nozioni di base su Markdown®: sintassi, utilizzo ed esempi [passo dopo passo]</title>
+    <!-- Favicons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2196f3">
+    <meta name="msapplication-TileColor" content="#2196f3">
+    <!--  Android 5 Chrome Color-->
+    <meta name="theme-color" content="#2196f3">
+    <!-- CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/show-invisibles/prism-show-invisibles.min.css" integrity="sha256-nOfkEPu/TzBvIxN8D/vW8weOUczzDbxRjgik/hA2hBI=" crossorigin="anonymous" />
+    <style type="text/css">
+    	.mv-40 {
+    		margin-top: 40px;
+    		margin-bottom: 40px;
+    	}
+
+    	img[src=""],
+    	img:not([src]) {
+    	  visibility: hidden;
+    	}
+
+    	.caption {
+    	    display: flex;
+    	    justify-content: center;
+    	    align-items: center;
+    	    margin: 10px 0;
+    	    color: hsl(0deg 0% 33%);
+    	    font-style: italic;
+    	    font-size: 75%;
+    	}
+
+    	picture {
+    		display: block;
+    		position: relative;
+    	}
+
+    	.cover-link {
+    		position: absolute;
+    		top: 0;
+    		bottom: 0;
+    		left: 0;
+    		right: 0;
+    	}
+    </style>
+  </head>
+  <body class="themes" cz-shortcut-listen="true">
+    <header>
+      <div class="container">
+  <a href="#" data-target="nav-mobile" class="top-nav sidenav-trigger waves-effect waves-light circle">
+  <i class="material-icons">menu</i>
+  </a>
+</div>
+<ul id="nav-mobile" class="sidenav">
+  <li class="logo blue">
+    <a id="logo-container" href="/" class="brand-logo">
+    <img src="https://markdown.net.br/assets/img/markdown-logo-transparent.svg" height="100">
+    </a>
+  </li>
+  <li class="push-it-down"></li>
+  <li class="search white">
+    <div class="search-wrapper">
+      <input id="search" placeholder="Ricerca"><i class="material-icons">search</i>
+      <div class="search-results"></div>
+    </div>
+  </li>
+  <li class="bold white">
+    <a href="/introduzione/" class="waves-effect waves-blue"><i class="tiny material-icons">child_care</i>Introduzione</a>
+  </li>
+  <li class="bold white">
+    <a href="/sintassi-di-base/" class="waves-effect waves-blue"><i class="tiny material-icons">short_text</i>Sintassi di base</a>
+  </li>
+  <li class="bold white">
+    <a href="/sintassi-estesa/" class="waves-effect waves-blue"><i class="tiny material-icons">format_align_left</i>Sintassi estesa</a>
+  </li>
+  <li class="bold white">
+    <a href="/cheatsheet/" class="waves-effect waves-blue"><i class="tiny material-icons">help_outline</i>Riferimento rapido</a>
+  </li>
+  <li class="bold white">
+    <a href="/software/" class="waves-effect waves-blue"><i class="tiny material-icons">card_travel</i>Software</a>
+  </li>
+</ul>
+    </header>
+    <main>
+      <div class="section" id="index-banner">
+        <div class="container">
+          <div class="row" style="margin-bottom: 0;">
+            <div class="col s12 m6 l7 offset-m1 offset-l1">
+              <h1>Sintassi di base per Markdown</h1>
+              <h4 class="light">In questo articolo imparerai a conoscere gli elementi che costituiscono la base del linguaggio Markdown.</h4>
+              <ol class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope
+                    itemtype="https://schema.org/ListItem">
+                  <a itemprop="item" href="/">
+                      <span itemprop="name">Markdown</span></a>
+                  <meta itemprop="position" content="1" />
+                </li>
+                <li>
+<i class="fas fa-chevron-right chevron-separator"></i>
+</li>
+<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+<span itemprop="name">Sintassi di base per Markdown</span>
+<meta itemprop="position" content="2" />
+</li>
+
+              </ol>
+            </div>
+            <div class="col s12 m5 l4 mt-s-30" align="center">
+            	<!-- square-fixed-300-250 -->
+            	<ins class="adsbygoogle"
+            	     style="display:inline-block;width:300px;height:250px"
+            	     data-ad-client="ca-pub-3427355473051563"
+            	     data-ad-slot="1035906960"></ins>
+            	<script>
+            	     (adsbygoogle = window.adsbygoogle || []).push({});
+            	</script>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <!--  Outer row  -->
+        <div class="row">
+          <div class="section col s12 m8 offset-m1 xl7 offset-xl1">
+            <div class="row scrollspy">
+    <div class="col s12">
+        <h2 id="overview">Panoramica</h2>
+
+        <p>Nonostante alcune variazioni, la maggior parte delle applicazioni supporta gli elementi di base di Markdown. Questi elementi sono essenziali per poter formattare un documento. Ma non commettere errori, usando solo le basi di Markdown puoi creare siti ben progettati per Web.</p>
+
+        <blockquote><b>NOTA</b>: Quando possibile, quando ci sono variazioni di sintassi da un processore Markdown a un altro, queste saranno annotate nell'articolo.</blockquote>
+
+        <h2 id="headings">Titoli</h2>
+
+        <p>Ogni documento ha o dovrebbe avere un titolo, corretto? Quindi, iniziamo con esso.</p>
+
+        <p>Il simbolo utilizzato per formattare un titolo in Markdown è la parola tag <code class="lang-markdown">#</code>. Quando si crea il titolo, formattare il codice inserendo un cancelletto all'inizio della riga, demarcando l'intestazione.</p>
+
+        <p>Per esempio:</p>
+
+        <div class="code-example">
+	<pre class="lang-markdown"><code># Titolo di livello 1</code></pre>
+	<a href="/editore/?markdown=%23%20Titolo%20di%20livello%201" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+        <p>Verrà convertito in tag <code class="lang-html">h1</code> da HTML.</p>
+
+        <pre class="lang-html"><code>&lt;h1&gt;Titolo di livello 1&lt;/h1&gt;</code>.</pre>
+
+        <div class="image-container">
+            <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-h1_w1280.webp 1280w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-h1_w1126.webp 1126w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-h1_w972.webp 972w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-h1_w818.webp 818w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-h1_w664.webp 664w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-h1_w510.webp 510w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-h1_w356.webp 356w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-h1_w202.webp 202w"
+		         sizes="(max-width: 664px) 100vw, 664px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Tutorial su Markdown - Titolo H1 in Markdown convertito in HTML"
+		        	title="Tutorial su Markdown - Titolo H1 in Markdown convertito in HTML"
+		         	src="https://markdown.net.br/assets/img/basic-syntax/markdown-h1_w1280.png"
+		         	srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-h1_w1280.png 1280w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-h1_w1126.png 1126w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-h1_w972.png 972w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-h1_w818.png 818w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-h1_w664.png 664w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-h1_w510.png 510w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-h1_w356.png 356w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-h1_w202.png 202w"
+		         	sizes="(max-width: 664px) 100vw, 664px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/basic-syntax/markdown-h1_w1280.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Titolo H1 su Markdown convertito in HTML</span>
+		</figcaption>
+		</figure>
+        </div>
+
+        <blockquote><b>NOTA</b>: tag <code class="lang-html">h1</code> rappresenta il titolo più importante di HTML, solitamente il titolo dell'articolo.</blockquote>
+
+        <p>Il numero di hash che utilizzi all'inizio della riga indica il livello del titolo, pertanto la formattazione <code class="lang-markdown">### My title</code> crea un'intestazione di livello 3.</p>
+
+        <p class="mv-40">
+            <ins class="adsbygoogle"
+                 style="display:block; text-align:center;"
+                 data-ad-layout="in-article"
+                 data-ad-format="fluid"
+                 data-ad-client="ca-pub-3427355473051563"
+                 data-ad-slot="3854885260"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </p>
+
+        <blockquote><b>NOTA</b>: Quando parliamo di livello, parliamo dei titoli convertiti in HTML. In HTML i livelli del titolo vanno da 1 a 6, indicati con tags <code class="lang-html">h1</code>, <code class="lang-html">h2</code>, <code class="lang-html">h3</code>, <code class="lang-html">h4</code>, <code class="lang-html">h5</code> e <code class="lang-html">h6</code></blockquote>
+
+        <p class="mt-60"><b>ESEMPI</b></p>
+
+        <div class="code-comparison">
+            <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+            <div class="code-example">
+	<pre class="lang-markdown"><code># Titolo di livello 1</code></pre>
+	<a href="/editore/?markdown=%23%20Titolo%20di%20livello%201" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+            <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+            <pre class="lang-html"><code>&lt;h1&gt;Titolo di livello 1&lt;/h1&gt;</code></pre>
+            <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>Risultato</b></p>
+            <div class="code-sample">
+                <span class="h1-like">Titolo di livello 1</span>
+            </div>
+        </div>
+
+        <div class="code-comparison">
+            <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+            <div class="code-example">
+	<pre class="lang-markdown"><code>## Titolo di livello 2</code></pre>
+	<a href="/editore/?markdown=%23%23%20Titolo%20di%20livello%202" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+            <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+            <pre class="lang-html"><code>&lt;h2&gt;Titolo di livello 2&lt;/h2&gt;</code></pre>
+            <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>Risultato</b></p>
+            <div class="code-sample">
+                <span class="h2-like">Titolo di livello 2</span>
+            </div>
+        </div>
+
+        <div class="code-comparison">
+            <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+            <div class="code-example">
+	<pre class="lang-markdown"><code>### Titolo di livello 3</code></pre>
+	<a href="/editore/?markdown=%23%23%23%20Titolo%20di%20livello%203" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+            <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+            <pre class="lang-html"><code>&lt;h3&gt;Titolo di livello 3&lt;/h3&gt;</code></pre>
+            <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>Risultato</b></p>
+            <div class="code-sample">
+                <span class="h3-like">Titolo di livello 3</span>
+            </div>
+        </div>
+
+        <div class="code-comparison">
+            <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+            <div class="code-example">
+	<pre class="lang-markdown"><code>#### Titolo di livello 4</code></pre>
+	<a href="/editore/?markdown=%23%23%23%23%20Titolo%20di%20livello%204" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+            <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+            <pre class="lang-html"><code>&lt;h4&gt;Titolo di livello 4&lt;/h4&gt;</code></pre>
+            <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>Risultato</b></p>
+            <div class="code-sample">
+                <span class="h4-like">Titolo di livello 4</span>
+            </div>
+        </div>
+
+        <div class="code-comparison">
+            <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+            <div class="code-example">
+	<pre class="lang-markdown"><code>##### Titolo di livello 5</code></pre>
+	<a href="/editore/?markdown=%23%23%23%23%23%20Titolo%20di%20livello%205" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+            <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+            <pre class="lang-html"><code>&lt;h5&gt;Titolo di livello 5&lt;/h5&gt;</code></pre>
+            <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>Risultato</b></p>
+            <div class="code-sample">
+                <span class="h5-like">Titolo di livello 5</span>
+            </div>
+        </div>
+
+        <div class="code-comparison">
+            <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+            <div class="code-example">
+	<pre class="lang-markdown"><code>###### Titolo di livello 6</code></pre>
+	<a href="/editore/?markdown=%23%23%23%23%23%23%20Titolo%20di%20livello%206" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+            <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+            <pre class="lang-html"><code>&lt;h6&gt;Titolo di livello 6&lt;/h6&gt;</code></pre>
+            <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>Risultato</b></p>
+            <div class="code-sample">
+                <span class="h6-like">Titolo di livello 6</span>
+            </div>
+        </div>
+
+        <div class="image-container">
+            <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-headings_w1280.webp 1280w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings_w1126.webp 1126w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings_w972.webp 972w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings_w818.webp 818w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings_w664.webp 664w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings_w510.webp 510w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings_w356.webp 356w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings_w202.webp 202w"
+		         sizes="(max-width: 664px) 100vw, 664px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Tutorial Markdown - titoli Markdown su StackEdit"
+		        	title="Tutorial Markdown - titoli Markdown su StackEdit"
+		         	src="https://markdown.net.br/assets/img/basic-syntax/markdown-headings_w1280.png"
+		         	srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-headings_w1280.png 1280w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings_w1126.png 1126w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings_w972.png 972w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings_w818.png 818w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings_w664.png 664w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings_w510.png 510w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings_w356.png 356w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings_w202.png 202w"
+		         	sizes="(max-width: 664px) 100vw, 664px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/basic-syntax/markdown-headings_w1280.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Titoli Markdown su StackEdit</span>
+		</figcaption>
+		</figure>
+        </div>
+
+        <h3 id="headings-alternative-syntax">Sintassi alternativa</h3>
+
+        <p>Markdown offre una sintassi diversa per la costruzione di intestazioni di livello 1 e 2. Invece di utilizzare l'hash all'inizio della riga, aggiungi i segni di uguale <code class="lang-text">==</code> sotto le intestazioni di livello 1 e i segni meno <code class="lang-text">-</code> per il livello 2 intestazioni.</p>
+
+        <div class="image-container">
+            <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax_w1280.webp 1280w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax_w1126.webp 1126w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax_w972.webp 972w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax_w818.webp 818w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax_w664.webp 664w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax_w510.webp 510w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax_w356.webp 356w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax_w202.webp 202w"
+		         sizes="(max-width: 664px) 100vw, 664px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Tutorial Markdown - Sintassi alternativa per la creazione di titoli di livello 1 e livello 2"
+		        	title="Tutorial Markdown - Sintassi alternativa per la creazione di titoli di livello 1 e livello 2"
+		         	src="https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax_w1280.png"
+		         	srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax_w1280.png 1280w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax_w1126.png 1126w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax_w972.png 972w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax_w818.png 818w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax_w664.png 664w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax_w510.png 510w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax_w356.png 356w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax_w202.png 202w"
+		         	sizes="(max-width: 664px) 100vw, 664px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax_w1280.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Sintassi alternativa per la creazione di livello 1 e intestazioni di livello</span>
+		</figcaption>
+		</figure>
+        </div>
+
+        <p class="mt-60"><b>ESEMPI</b></p>
+
+        <div class="code-comparison">
+            <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+            <div class="code-example">
+	<pre class="lang-markdown"><code>Titolo di livello 1
+===============</code></pre>
+	<a href="/editore/?markdown=Titolo%20di%20livello%201%0D%0A%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+            <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+            <pre class="lang-html"><code>&lt;h1&gt;Titolo di livello 1&lt;/h1&gt;</code></pre>
+            <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>Risultato</b></p>
+            <div class="code-sample">
+                <span class="h1-like">Titolo di livello 1</span>
+            </div>
+        </div>
+
+        <div class="code-comparison">
+            <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+            <div class="code-example">
+	<pre class="lang-markdown"><code>Titolo di livello 2
+---------------</code></pre>
+	<a href="/editore/?markdown=Titolo%20di%20livello%202%0D%0A%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+            <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+            <pre class="lang-html"><code>&lt;h2&gt;Titolo di livello 1&lt;/h2&gt;</code></pre>
+            <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>Risultato</b></p>
+            <div class="code-sample">
+                <span class="h2-like">Titolo di livello 2</span>
+            </div>
+        </div>
+
+        <p>Alcuni editor di Markdown consentono di utilizzare solo un segno di uguale <code class="lang-plaintext">=</code> o un trattino <code class="lang-plaintext">-</code> sotto il testo, ma questo può causare problemi di formattazione in altri editor che non sono compatibili con questa sintassi.</p>
+
+            <div class="image-container">
+                <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax-2_w1280.webp 1280w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax-2_w1126.webp 1126w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax-2_w972.webp 972w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax-2_w818.webp 818w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax-2_w664.webp 664w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax-2_w510.webp 510w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax-2_w356.webp 356w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax-2_w202.webp 202w"
+		         sizes="(max-width: 664px) 100vw, 664px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Tutorial su Markdown - Sintassi alternativa per titoli che utilizzano un solo segno"
+		        	title="Tutorial su Markdown - Sintassi alternativa per titoli che utilizzano un solo segno"
+		         	src="https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax-2_w1280.png"
+		         	srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax-2_w1280.png 1280w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax-2_w1126.png 1126w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax-2_w972.png 972w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax-2_w818.png 818w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax-2_w664.png 664w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax-2_w510.png 510w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax-2_w356.png 356w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax-2_w202.png 202w"
+		         	sizes="(max-width: 664px) 100vw, 664px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax-2_w1280.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Sintassi alternativa per le intestazioni che utilizzano un solo segno</span>
+		</figcaption>
+		</figure>
+            </div>
+
+            <h3 id="headings-best-practices">Titoli: buone pratiche</h3>
+
+            <p>Potresti incontrare problemi di compatibilità quando parliamo dello spazio tra il cancelletto <code class="lang-text">#</code> all'inizio della riga e il testo del titolo.</p>
+
+            <p>Si consiglia di aggiungere sempre almeno uno spazio tra di loro, oltre a fornire una migliore lettura del documento, avrai ancora più supporto per la modifica tra le applicazioni Markdown.</p>
+
+            <p class="mv-40">
+                <ins class="adsbygoogle"
+                     style="display:block; text-align:center;"
+                     data-ad-layout="in-article"
+                     data-ad-format="fluid"
+                     data-ad-client="ca-pub-3427355473051563"
+                     data-ad-slot="3854885260"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </p>
+
+            <p><a href="#table-1-3">Tabella 1.3</a> esemplifica la corretta costruzione del titolo.</p>
+
+            <table class="responsive-table" id="table-1-3">
+                <thead>
+                    <tr>
+                        <th class="green-text">
+                            <span class="hide-on-small-only"><i class="fas fa-thumbs-up"></i>&nbsp;&nbsp;Giusto</span>
+                            <span class="hide-on-med-and-up"><i class="fas fa-thumbs-up"></i></span>
+                        </th>
+                        <th class="red-text">
+                            <span class="hide-on-small-only"><i class="fas fa-thumbs-down"></i>&nbsp;&nbsp;Non consigliato</span>
+                            <span class="hide-on-med-and-up"><i class="fas fa-thumbs-down"></i></span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td># Titolo del mio articolo</td>
+                        <td>#Titolo del mio articolo</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <small class="caption">Tabella 1.3 - Uso corretto nella costruzione di titoli / intestazioni in Markdown.</small>
+
+            <div class="image-container">
+                <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-headings-correct-syntax_w501.webp 501w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-correct-syntax_w426.webp 426w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-correct-syntax_w351.webp 351w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-correct-syntax_w276.webp 276w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-correct-syntax_w201.webp 201w"
+		         sizes="(max-width: 501px) 100vw, 501px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Tutorial su Markdown - Creazione di un titolo in Markdown nel modo giusto"
+		        	title="Tutorial su Markdown - Creazione di un titolo in Markdown nel modo giusto"
+		         	src="https://markdown.net.br/assets/img/basic-syntax/markdown-headings-correct-syntax_w501.png"
+		         	srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-headings-correct-syntax_w501.png 501w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-correct-syntax_w426.png 426w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-correct-syntax_w351.png 351w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-correct-syntax_w276.png 276w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-correct-syntax_w201.png 201w"
+		         	sizes="(max-width: 501px) 100vw, 501px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/basic-syntax/markdown-headings-correct-syntax_w501.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Costruire un titolo in Markdown nel modo giusto</span>
+		</figcaption>
+		</figure>
+            </div>
+
+
+            <h2 id="paragraphs">Paragrafi</h2>
+
+            <p>La formattazione più semplice per Markdown è quella del paragrafo. Per crearne uno, separa semplicemente una parte di testo con una riga vuota, creando frammentazioni che il processore Markdown interpreterà come paragrafi.</p>
+
+            <div class="image-container">
+                <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph_w579.webp 579w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph_w484.webp 484w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph_w389.webp 389w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph_w294.webp 294w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph_w199.webp 199w"
+		         sizes="(max-width: 579px) 100vw, 579px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Tutorial Markdown - Paragrafi"
+		        	title="Tutorial Markdown - Paragrafi"
+		         	src="https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph_w579.png"
+		         	srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph_w579.png 579w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph_w484.png 484w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph_w389.png 389w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph_w294.png 294w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph_w199.png 199w"
+		         	sizes="(max-width: 579px) 100vw, 579px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph_w579.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Paragrafi in Markdown</span>
+		</figcaption>
+		</figure>
+            </div>
+
+            <p class="mt-60"><b>ESEMPI</b></p>
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>Markdown è importante per ogni programmatore.
+
+Imparare Markdown è essenziale per una carriera di successo.</code></pre>
+	<a href="/editore/?markdown=Markdown%20%C3%A8%20importante%20per%20ogni%20programmatore%2E%0D%0A%0D%0AImparare%20Markdown%20%C3%A8%20essenziale%20per%20una%20carriera%20di%20successo%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+
+                <pre class="lang-html"><code>&lt;p&gt;Markdown è importante per ogni programmatore.&lt;/p&gt;
+
+&lt;p&gt;Imparare Markdown è essenziale per una carriera di successo.&lt;p&gt;</code></pre>
+
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>Risultato</b></p>
+                <div class="code-sample">
+                    <p>Markdown è importante per ogni programmatore.</p>
+                    <p>Imparare Markdown è essenziale per una carriera di successo.</p>
+                </div>
+            </div>
+
+
+
+            <h3 id="paragraphs-best-practices">Paragrafi: migliori pratiche</h3>
+
+            <p>Di solito il paragrafo è bloccato all'inizio della riga, cioè evita di farlo rientrare utilizzando spazi di qualsiasi tipo, né spazi né tabulazioni.</p>
+
+            <blockquote><b>NOTA</b>: il paragrafo deve essere rientrato quando si trova all'interno di un elenco.</blockquote>
+
+            <p class="mv-40">
+                <ins class="adsbygoogle"
+                     style="display:block; text-align:center;"
+                     data-ad-layout="in-article"
+                     data-ad-format="fluid"
+                     data-ad-client="ca-pub-3427355473051563"
+                     data-ad-slot="3854885260"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </p>
+
+            <p><a href="#table-1-5">Tabella 1.5</a> esemplifica l'uso corretto per la costruzione di un paragrafo.</p>
+
+            <table class="responsive-table" id="table-1-5">
+                <thead>
+                    <tr>
+                        <th class="green-text">
+                            <span class="hide-on-small-only"><i class="fas fa-thumbs-up"></i>&nbsp;&nbsp;Giusto</span>
+                            <span class="hide-on-med-and-up"><i class="fas fa-thumbs-up"></i></span>
+                        </th>
+                        <th class="red-text">
+                            <span class="hide-on-small-only"><i class="fas fa-thumbs-down"></i>&nbsp;&nbsp;Non consigliato</span>
+                            <span class="hide-on-med-and-up"><i class="fas fa-thumbs-down"></i></span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            Non utilizzare spazi o tabulazioni davanti ai paragrafi.<br><br>
+                            Il paragrafo deve essere allineato a sinistra.<br><br>
+                        </td>
+                        <td>
+                            &nbsp;&nbsp;&nbsp;&nbsp;Questi spazi possono causare problemi di formattazione a seconda dell'applicazione Markdown.<br><br>
+                            &nbsp;&nbsp;Nessuna tabulazione è consigliata.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <small class="caption">Tabella 1.5 - Cosa fare e cosa non fare quando si crea un paragrafo in Markdown.</small>
+
+            <div class="image-container">
+                <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph-wrong-syntax_w1280.webp 1280w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph-wrong-syntax_w1126.webp 1126w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph-wrong-syntax_w972.webp 972w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph-wrong-syntax_w818.webp 818w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph-wrong-syntax_w664.webp 664w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph-wrong-syntax_w510.webp 510w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph-wrong-syntax_w356.webp 356w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph-wrong-syntax_w202.webp 202w"
+		         sizes="(max-width: 664px) 100vw, 664px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Tutorial su Markdown - Sintassi del paragrafo errata"
+		        	title="Tutorial su Markdown - Sintassi del paragrafo errata"
+		         	src="https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph-wrong-syntax_w1280.png"
+		         	srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph-wrong-syntax_w1280.png 1280w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph-wrong-syntax_w1126.png 1126w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph-wrong-syntax_w972.png 972w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph-wrong-syntax_w818.png 818w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph-wrong-syntax_w664.png 664w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph-wrong-syntax_w510.png 510w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph-wrong-syntax_w356.png 356w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph-wrong-syntax_w202.png 202w"
+		         	sizes="(max-width: 664px) 100vw, 664px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph-wrong-syntax_w1280.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			
+		</figure>
+            </div>
+
+            <h2 id="line-break">Interruzioni di riga</h2>
+
+            <p>In HTML un'interruzione di riga è rappresentata da tag <code class="lang-html">br</code>.</p>
+
+            <div class="image-container">
+                <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/basic-syntax/html-line-break_w1037.webp 1037w,
+https://markdown.net.br/assets/img/basic-syntax/html-line-break_w917.webp 917w,
+https://markdown.net.br/assets/img/basic-syntax/html-line-break_w797.webp 797w,
+https://markdown.net.br/assets/img/basic-syntax/html-line-break_w677.webp 677w,
+https://markdown.net.br/assets/img/basic-syntax/html-line-break_w557.webp 557w,
+https://markdown.net.br/assets/img/basic-syntax/html-line-break_w437.webp 437w,
+https://markdown.net.br/assets/img/basic-syntax/html-line-break_w317.webp 317w,
+https://markdown.net.br/assets/img/basic-syntax/html-line-break_w197.webp 197w"
+		         sizes="(max-width: 677px) 100vw, 677px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Tutorial Markdown - interruzione di riga in HTML"
+		        	title="Tutorial Markdown - interruzione di riga in HTML"
+		         	src="https://markdown.net.br/assets/img/basic-syntax/html-line-break_w1037.png"
+		         	srcset="https://markdown.net.br/assets/img/basic-syntax/html-line-break_w1037.png 1037w,
+https://markdown.net.br/assets/img/basic-syntax/html-line-break_w917.png 917w,
+https://markdown.net.br/assets/img/basic-syntax/html-line-break_w797.png 797w,
+https://markdown.net.br/assets/img/basic-syntax/html-line-break_w677.png 677w,
+https://markdown.net.br/assets/img/basic-syntax/html-line-break_w557.png 557w,
+https://markdown.net.br/assets/img/basic-syntax/html-line-break_w437.png 437w,
+https://markdown.net.br/assets/img/basic-syntax/html-line-break_w317.png 317w,
+https://markdown.net.br/assets/img/basic-syntax/html-line-break_w197.png 197w"
+		         	sizes="(max-width: 677px) 100vw, 677px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/basic-syntax/html-line-break_w1037.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Interruzione di riga in HTML</span>
+		</figcaption>
+		</figure>
+            </div>
+
+            <p>Per generare un'interruzione di riga in Markdown, inserire due o più spazi alla fine della riga e premere il tasto <code class="lang-plaintext">Enter</code>.</p>
+
+            <p class="mt-60"><b>ESEMPI</b></p>
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>Prima riga del documento.
+Seconda riga del documento.</code></pre>
+	<a href="/editore/?markdown=Prima%20riga%20del%20documento%2E%0D%0ASeconda%20riga%20del%20documento%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>&lt;p&gt;Prima riga del documento.&lt;br&gt;<br>
+Seconda riga del documento.&lt;/p&gt;</code></pre>
+
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>Risultato</b></p>
+                <div class="code-sample">
+                    <p>Prima riga del documento.<br>
+                        Seconda riga del documento.
+                    </p>
+                </div>
+            </div>
+
+            <h3 id="line-break-best-practices">Interruzione di riga: best practice</h3>
+
+            <p>L'uso di spazi bianchi per creare interruzioni di riga, sebbene compatibile con la maggior parte delle applicazioni, può causare problemi di formattazione.</p>
+
+            <p>Ecco alcuni punti:</p>
+
+            <ul class="collection">
+                <li class="collection-item green lighten-5">Gli spazi vuoti dopo la riga sono difficili da notare.</li>
+                <li class="collection-item yellow lighten-5">Le persone possono aggiungere spazi vuoti alla fine della riga, a causa dell'abitudine o della disattenzione.</li>
+                <li class="collection-item">
+                    <ins class="adsbygoogle"
+                         style="display:block; text-align:center;"
+                         data-ad-layout="in-article"
+                         data-ad-format="fluid"
+                         data-ad-client="ca-pub-3427355473051563"
+                         data-ad-slot="3854885260"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </li>
+                <li class="collection-item green lighten-5">Alcuni editor di testo, come Sublime Text, hanno impostazioni che rimuovono gli spazi bianchi, prima e dopo, dalla riga durante il salvataggio del documento.</li>
+            </ul>
+
+            <p>Uma alternativa viável para evitar qualquer problema com quebra de linhas, basta usar a tag HTML <code class="lang-html">&lt;br&gt;</code> diretamente nos seus documentos.</p>
+
+            <blockquote><b>NOTA</b>: è interessante ricordare che la maggior parte delle applicazioni Markdown sono compatibili anche con tags in HTML, cioè puoi unire la formattazione Markdown con la formattazione HTML nello stesso documento.</blockquote>
+
+            <blockquote><b>NOTA</b>: in alcune applicazioni, è sufficiente premere il tasto <code class="lang-plaintext">Enter</code> per creare un'interruzione di riga</blockquote>
+
+            <blockquote><b>NOTA</b>: le variazioni di Markdown, come CommonMark, interpretano l'uso di una barra rovesciata <code class="lang-text">\</code> come un indicatore di una nuova riga.</blockquote>
+
+            <p>La pressione del tasto <code class="lang-plaintext">Enter</code> o l'uso della barra rovesciata <code class="lang-plaintext">\</code>, sebbene validi, non sono raccomandati in quanto la compatibilità dipende dal programma Markdown.</p>
+
+            <p><a href="#table-1-7">Tabella 1.7</a> mostra la sintassi corretta per la creazione di una nuova riga.</p>
+
+            <table class="responsive-table" id="table-1-7">
+                <thead>
+                    <tr>
+                        <th class="green-text">
+                            <span class="hide-on-small-only"><i class="fas fa-thumbs-up"></i>&nbsp;&nbsp;Giusto</span>
+                            <span class="hide-on-med-and-up"><i class="fas fa-thumbs-up"></i></span>
+                        </th>
+                        <th class="red-text">
+                            <span class="hide-on-small-only"><i class="fas fa-thumbs-down"></i>&nbsp;&nbsp;Non consigliato</span>
+                            <span class="hide-on-med-and-up"><i class="fas fa-thumbs-down"></i></span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            Due spazi dopo la riga.<code class="lang-text"> </code><code class="lang-text"> </code><br>
+                            Nuova riga inserita.<br><br>
+                            Utilizzando tag HTML per rompere la linea.<code class="lang-html">&lt;br&gt;</code><br>
+                            Nuova riga inserita.<br><br>
+                        </td>
+                        <td>
+                            Utilizzo della barra rovesciata per interrompere la linea.\<br>
+                            Nuova riga inserita.<br><br>
+                            Rompere la linea utilizzando semplicemente la pressione di invio.<code class="lang-text">Enter</code><br>
+                            Nuova riga inserita.<br><br>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <small class="caption">Tabella 1.7 - Modo corretto per generare un'interruzione di riga in Markdown.</small>
+
+
+            <h2 id="emphasis">Enfasi</h2>
+
+            <p>Simile a un editor WYSIWYG, come Microsoft Word, Markdown offre anche la formattazione per enfatizzare il testo.</p>
+
+            <div class="image-container">
+                <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/basic-syntax/microsoft-word-emphasis-formatting_w564.webp 564w,
+https://markdown.net.br/assets/img/basic-syntax/microsoft-word-emphasis-formatting_w473.webp 473w,
+https://markdown.net.br/assets/img/basic-syntax/microsoft-word-emphasis-formatting_w382.webp 382w,
+https://markdown.net.br/assets/img/basic-syntax/microsoft-word-emphasis-formatting_w291.webp 291w,
+https://markdown.net.br/assets/img/basic-syntax/microsoft-word-emphasis-formatting_w200.webp 200w"
+		         sizes="(max-width: 564px) 100vw, 564px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Tutorial su Markdown - Formattazione di enfasi in Microsoft Word"
+		        	title="Tutorial su Markdown - Formattazione di enfasi in Microsoft Word"
+		         	src="https://markdown.net.br/assets/img/basic-syntax/microsoft-word-emphasis-formatting_w564.png"
+		         	srcset="https://markdown.net.br/assets/img/basic-syntax/microsoft-word-emphasis-formatting_w564.png 564w,
+https://markdown.net.br/assets/img/basic-syntax/microsoft-word-emphasis-formatting_w473.png 473w,
+https://markdown.net.br/assets/img/basic-syntax/microsoft-word-emphasis-formatting_w382.png 382w,
+https://markdown.net.br/assets/img/basic-syntax/microsoft-word-emphasis-formatting_w291.png 291w,
+https://markdown.net.br/assets/img/basic-syntax/microsoft-word-emphasis-formatting_w200.png 200w"
+		         	sizes="(max-width: 564px) 100vw, 564px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/basic-syntax/microsoft-word-emphasis-formatting_w564.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Enfasi sulla formattazione in Microsoft Word</span>
+		</figcaption>
+		</figure>
+            </div>
+
+            <p>Tra i formati di enfasi più popolari ci sono il grassetto e il corsivo, che possono essere applicati anche utilizzando la sintassi Markdown.</p>
+
+            <h3 id="bold">Grassetto in Markdown</h3>
+
+            <p>Per formattare il testo in grassetto in Markdown, inserire due asterischi <code class="lang-plaintext">**</code> prima del contenuto e due asterischi <code class="lang-plaintext">**</code> dopo il contenuto.</p>
+
+            <div class="image-container">
+                <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-bold_w853.webp 853w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold_w760.webp 760w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold_w667.webp 667w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold_w574.webp 574w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold_w481.webp 481w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold_w388.webp 388w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold_w295.webp 295w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold_w202.webp 202w"
+		         sizes="(max-width: 760px) 100vw, 760px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Tutorial su Markdown - Grassetto in Markdown"
+		        	title="Tutorial su Markdown - Grassetto in Markdown"
+		         	src="https://markdown.net.br/assets/img/basic-syntax/markdown-bold_w853.png"
+		         	srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-bold_w853.png 853w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold_w760.png 760w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold_w667.png 667w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold_w574.png 574w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold_w481.png 481w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold_w388.png 388w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold_w295.png 295w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold_w202.png 202w"
+		         	sizes="(max-width: 760px) 100vw, 760px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/basic-syntax/markdown-bold_w853.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Grassetto in Markdown</span>
+		</figcaption>
+		</figure>
+            </div>
+
+
+            <p class="mt-60"><b>ESEMPI</b></p>
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>**This part of the text** will be bold.</code></pre>
+	<a href="/editore/?markdown=%2A%2AThis%20part%20of%20the%20text%2A%2A%20will%20be%20bold%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>&lt;strong&gt;This part of the text&lt;/strong&gt; will be bold.</code></pre>
+
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>Risultato</b></p>
+                <div class="code-sample">
+                    <strong>This part of the text</strong> will be bold.
+                </div>
+            </div>
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>__This part of the text__ will be bold.</code></pre>
+	<a href="/editore/?markdown=__This%20part%20of%20the%20text__%20will%20be%20bold%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>&lt;strong&gt;This part of the text&lt;/strong&gt; will be bold.</code></pre>
+
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>Risultato</b></p>
+                <div class="code-sample">
+                    <strong>This part of the text</strong> will be bold.
+                </div>
+            </div>
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>Markdown**Is**Easy**To**Learn</code></pre>
+	<a href="/editore/?markdown=Markdown%2A%2AIs%2A%2AEasy%2A%2ATo%2A%2ALearn" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>Markdown&lt;strong&gt;Is&lt;/strong&gt;Easy&lt;strong&gt;To&lt;/strong&gt;Learn</code></pre>
+
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>Risultato</b></p>
+                <div class="code-sample">
+                    Markdown<strong>Is</strong>Easy<strong>To</strong>Learn
+                </div>
+            </div>
+
+            <blockquote><b>NOTA</b>: come mostrato negli esempi precedenti, è possibile sostituire gli asterischi con trattini bassi, utilizzando due trattini bassi <code class="lang-plaintext">__</code> prima e dopo il contenuto formatta anche il testo in grassetto in Markdown.</blockquote>
+
+            <h3 id="bold-best-practices">Grassetto: migliori pratiche</h3>
+
+            <p>Sia l'uso di due asterischi che l'uso di due trattini bassi possono applicare la formattazione in grassetto al contenuto.</p>
+
+            <p>Tuttavia, l'uso di trattini bassi nel mezzo di una parola può generare problemi di formattazione a seconda del processore Markdown, quindi preferibilmente nell'uso degli asterischi.</p>
+
+            <p class="mv-40">
+                <ins class="adsbygoogle"
+                     style="display:block; text-align:center;"
+                     data-ad-layout="in-article"
+                     data-ad-format="fluid"
+                     data-ad-client="ca-pub-3427355473051563"
+                     data-ad-slot="3854885260"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </p>
+
+            <p><a href="#table-1-9">Tabella 1.9</a> mostra l'uso consigliato per la formattazione in grassetto.</p>
+
+            <table class="responsive-table" id="table-1-9">
+                <thead>
+                    <tr>
+                        <th class="green-text">
+                            <span class="hide-on-small-only"><i class="fas fa-thumbs-up"></i>&nbsp;&nbsp;Giusto</span>
+                            <span class="hide-on-med-and-up"><i class="fas fa-thumbs-up"></i></span>
+                        </th>
+                        <th class="red-text">
+                            <span class="hide-on-small-only"><i class="fas fa-thumbs-down"></i>&nbsp;&nbsp;Non consigliato</span>
+                            <span class="hide-on-med-and-up"><i class="fas fa-thumbs-down"></i></span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            markdown**is**simple
+                        </td>
+                        <td>
+                            markdown__is__simple
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <small class="caption">Tabella 1.9 - Sintassi consigliata per la formattazione in grassetto in Markdown.</small>
+
+            <div class="image-container">
+                <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-bold-best-practices_w852.webp 852w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-best-practices_w759.webp 759w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-best-practices_w666.webp 666w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-best-practices_w573.webp 573w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-best-practices_w480.webp 480w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-best-practices_w387.webp 387w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-best-practices_w294.webp 294w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-best-practices_w201.webp 201w"
+		         sizes="(max-width: 759px) 100vw, 759px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Tutorial su Markdown - Grassetto al centro del contenuto"
+		        	title="Tutorial su Markdown - Grassetto al centro del contenuto"
+		         	src="https://markdown.net.br/assets/img/basic-syntax/markdown-bold-best-practices_w852.png"
+		         	srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-bold-best-practices_w852.png 852w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-best-practices_w759.png 759w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-best-practices_w666.png 666w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-best-practices_w573.png 573w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-best-practices_w480.png 480w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-best-practices_w387.png 387w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-best-practices_w294.png 294w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-best-practices_w201.png 201w"
+		         	sizes="(max-width: 759px) 100vw, 759px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/basic-syntax/markdown-bold-best-practices_w852.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Grassetto al centro del contenuto</span>
+		</figcaption>
+		</figure>
+            </div>
+
+
+            <h3 id="italics">Corsivo in Markdown</h3>
+
+            <p>Simile al grassetto, la formattazione corsivo in Markdown utilizza anche un asterisco <code class="lang-plaintext">*</code> o un trattino basso <code class="lang-plaintext">_</code>, ma in caso di corsivo, usa solo un asterisco <code class="lang-plaintext">*</code> prima del contenuto e un asterisco <code class="lang-plaintext">*</code> dopo il contenuto.</p>
+
+            <div class="image-container">
+                <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-italics_w847.webp 847w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics_w755.webp 755w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics_w663.webp 663w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics_w571.webp 571w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics_w479.webp 479w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics_w387.webp 387w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics_w295.webp 295w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics_w203.webp 203w"
+		         sizes="(max-width: 755px) 100vw, 755px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Tutorial su Markdown - Corsivo in Markdown"
+		        	title="Tutorial su Markdown - Corsivo in Markdown"
+		         	src="https://markdown.net.br/assets/img/basic-syntax/markdown-italics_w847.png"
+		         	srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-italics_w847.png 847w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics_w755.png 755w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics_w663.png 663w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics_w571.png 571w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics_w479.png 479w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics_w387.png 387w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics_w295.png 295w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics_w203.png 203w"
+		         	sizes="(max-width: 755px) 100vw, 755px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/basic-syntax/markdown-italics_w847.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Sintassi della formattazione in corsivo in Markdown</span>
+		</figcaption>
+		</figure>
+            </div>
+
+            <p class="mt-60"><b>ESEMPI</b></p>
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>*This part of the text* will be in italics.</code></pre>
+	<a href="/editore/?markdown=%2AThis%20part%20of%20the%20text%2A%20will%20be%20in%20italics%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>&lt;em&gt;This part of the text&lt;/em&gt; will be in italics.</code></pre>
+
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>Risultato</b></p>
+                <div class="code-sample">
+                    <em>This part of the text</em> will be in italics.
+                </div>
+            </div>
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>_This part of the text_ will be in italics.</code></pre>
+	<a href="/editore/?markdown=_This%20part%20of%20the%20text_%20will%20be%20in%20italics%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>&lt;em&gt;This part of the text&lt;/em&gt; will be in italics.</code></pre>
+
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>Risultato</b></p>
+                <div class="code-sample">
+                    <em>This part of the text</em> will be in italics.
+                </div>
+            </div>
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>Markdown*Is*Easy*To*Learn</code></pre>
+	<a href="/editore/?markdown=Markdown%2AIs%2AEasy%2ATo%2ALearn" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>Markdown&lt;em&gt;Is&lt;/em&gt;Easy&lt;em&gt;To&lt;/em&gt;Learn</code></pre>
+
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>Risultato</b></p>
+                <div class="code-sample">
+                    Markdown<em>Is</em>Easy<em>To</em>Learn
+                </div>
+            </div>
+
+            <p>Per scrivere in corsivo la metà di una parola in Markdown, usa un asterisco prima e dopo il contenuto.</p>
+
+            <p>Esempio:</p>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>Mar*kdo*wn</code></pre>
+	<a href="/editore/?markdown=Mar%2Akdo%2Awn" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+            <h3 id="italics-best-practices">Corsivo: buone pratiche</h3>
+
+            <p>Usa sempre un asterisco <code class="lang-plaintext">*</code> quando usi il corsivo nel mezzo di una parola, questo eviterà problemi di compatibilità con i processori Markdown.</p>
+
+            <p><a href="#table-1-11">Tabella 1.11</a> mostra il markup consigliato per enfatizzare il contenuto in corsivo.</p>
+
+            <table class="responsive-table" id="table-1-11">
+                <thead>
+                    <tr>
+                        <th class="green-text">
+                            <span class="hide-on-small-only"><i class="fas fa-thumbs-up"></i>&nbsp;&nbsp;Giusto</span>
+                            <span class="hide-on-med-and-up"><i class="fas fa-thumbs-up"></i></span>
+                        </th>
+                        <th class="red-text">
+                            <span class="hide-on-small-only"><i class="fas fa-thumbs-down"></i>&nbsp;&nbsp;Non consigliato</span>
+                            <span class="hide-on-med-and-up"><i class="fas fa-thumbs-down"></i></span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            markdown*is*simple
+                        </td>
+                        <td>
+                            markdown_is_simple
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <small class="caption">Tabella 1.11 - Formattazione consigliata per enfatizzare parte di una parola utilizzando il corsivo.</small>
+
+            <div class="image-container">
+                <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-italics-best-practices_w852.webp 852w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics-best-practices_w759.webp 759w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics-best-practices_w666.webp 666w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics-best-practices_w573.webp 573w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics-best-practices_w480.webp 480w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics-best-practices_w387.webp 387w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics-best-practices_w294.webp 294w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics-best-practices_w201.webp 201w"
+		         sizes="(max-width: 759px) 100vw, 759px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Tutorial su Markdown - Corsivo in Markdown - Best practice"
+		        	title="Tutorial su Markdown - Corsivo in Markdown - Best practice"
+		         	src="https://markdown.net.br/assets/img/basic-syntax/markdown-italics-best-practices_w852.png"
+		         	srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-italics-best-practices_w852.png 852w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics-best-practices_w759.png 759w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics-best-practices_w666.png 666w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics-best-practices_w573.png 573w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics-best-practices_w480.png 480w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics-best-practices_w387.png 387w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics-best-practices_w294.png 294w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics-best-practices_w201.png 201w"
+		         	sizes="(max-width: 759px) 100vw, 759px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/basic-syntax/markdown-italics-best-practices_w852.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Corsivo in Markdown: formatta la parte centrale della parola.</span>
+		</figcaption>
+		</figure>
+            </div>
+
+            <h3 id="bold-italics">Grassetto e corsivo</h3>
+
+            <div class="image-container">
+                <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics_w850.webp 850w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics_w757.webp 757w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics_w664.webp 664w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics_w571.webp 571w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics_w478.webp 478w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics_w385.webp 385w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics_w292.webp 292w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics_w199.webp 199w"
+		         sizes="(max-width: 757px) 100vw, 757px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Tutorial su Markdown - Grassetto e corsivo in Markdown"
+		        	title="Tutorial su Markdown - Grassetto e corsivo in Markdown"
+		         	src="https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics_w850.png"
+		         	srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics_w850.png 850w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics_w757.png 757w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics_w664.png 664w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics_w571.png 571w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics_w478.png 478w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics_w385.png 385w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics_w292.png 292w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics_w199.png 199w"
+		         	sizes="(max-width: 757px) 100vw, 757px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics_w850.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Grassetto e corsivo in Markdown</span>
+		</figcaption>
+		</figure>
+            </div>
+
+            <p>Solo grassetto o solo corsivo? Se lo desideri, puoi combinare i due formati per evidenziare qualsiasi contenuto.</p>
+
+            <p>Per applicare il grassetto e il corsivo contemporaneamente, aggiungi tre asterischi <code class="lang-text">***</code> o tre trattini bassi <code class="lang-text">___</code> intorno al testo da evidenziare.</p>
+
+            <p class="mv-40">
+                <ins class="adsbygoogle"
+                     style="display:block; text-align:center;"
+                     data-ad-layout="in-article"
+                     data-ad-format="fluid"
+                     data-ad-client="ca-pub-3427355473051563"
+                     data-ad-slot="3854885260"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </p>
+
+            <p>Se intendi enfatizzare la parte centrale di una parola con entrambi i formati, dai la preferenza all'uso degli asterischi, in questo caso tre asterischi <code class="lang-text">***</code>.</p>
+
+            <p class="mt-60"><b>ESEMPI</b></p>
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>***This part of the text*** will be bold and italicized.</code></pre>
+	<a href="/editore/?markdown=%2A%2A%2AThis%20part%20of%20the%20text%2A%2A%2A%20will%20be%20bold%20and%20italicized%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>&lt;strong&gt;&lt;em&gt;This part of the text&lt;/em&gt;&lt;/strong&gt; will be bold and italicized.</code></pre>
+
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>Risultato</b></p>
+                <div class="code-sample">
+                    <strong><em>This part of the text</em></strong> will be bold and italicized.
+                </div>
+            </div>
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>This is really ___important___.</code></pre>
+	<a href="/editore/?markdown=This%20is%20really%20___important___%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>This is really &lt;strong&gt;&lt;em&gt;important&lt;/em&gt;&lt;/strong&gt;.</code></pre>
+
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>Risultato</b></p>
+                <div class="code-sample">
+                    This is really <strong><em>important</em></strong>.
+                </div>
+            </div>
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>This is really __*important*__.</code></pre>
+	<a href="/editore/?markdown=This%20is%20really%20__%2Aimportant%2A__%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>This is really &lt;strong&gt;&lt;em&gt;important&lt;/em&gt;&lt;/strong&gt;.</code></pre>
+
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>Risultato</b></p>
+                <div class="code-sample">
+                    This is really <strong><em>important</em></strong>.
+                </div>
+            </div>
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>This is really **_important_**.</code></pre>
+	<a href="/editore/?markdown=This%20is%20really%20%2A%2A_important_%2A%2A%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>This is really &lt;strong&gt;&lt;em&gt;important&lt;/em&gt;&lt;/strong&gt;.</code></pre>
+
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>Risultato</b></p>
+                <div class="code-sample">
+                    This is really <strong><em>important</em></strong>.
+                </div>
+            </div>
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>This text is ***really*** important.</code></pre>
+	<a href="/editore/?markdown=This%20text%20is%20%2A%2A%2Areally%2A%2A%2A%20important%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>This text is &lt;strong&gt;&lt;em&gt;really&lt;/em&gt;&lt;/strong&gt; important.</code></pre>
+
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>Risultato</b></p>
+                <div class="code-sample">
+                    This text is <strong><em>really</em></strong> important.
+                </div>
+            </div>
+
+            <h3 id="bold-italics-best-practices">Grassetto e corsivo: best practice</h3>
+
+            <p>Per evitare problemi di compatibilità con le applicazioni Markdown, quando si evidenzia la metà di una parola, combinando grassetto e corsivo, dare la preferenza all'uso di tre asterischi.</p>
+
+            <div class="image-container">
+                <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics-best-practices_w977.webp 977w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics-best-practices_w866.webp 866w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics-best-practices_w755.webp 755w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics-best-practices_w644.webp 644w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics-best-practices_w533.webp 533w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics-best-practices_w422.webp 422w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics-best-practices_w311.webp 311w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics-best-practices_w200.webp 200w"
+		         sizes="(max-width: 755px) 100vw, 755px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Tutorial su Markdown - Grassetto e corsivo in Markdown - Best practice"
+		        	title="Tutorial su Markdown - Grassetto e corsivo in Markdown - Best practice"
+		         	src="https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics-best-practices_w977.png"
+		         	srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics-best-practices_w977.png 977w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics-best-practices_w866.png 866w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics-best-practices_w755.png 755w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics-best-practices_w644.png 644w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics-best-practices_w533.png 533w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics-best-practices_w422.png 422w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics-best-practices_w311.png 311w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics-best-practices_w200.png 200w"
+		         	sizes="(max-width: 755px) 100vw, 755px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics-best-practices_w977.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Sintassi consigliata per applicare grassetto e corsivo a Markdown.</span>
+		</figcaption>
+		</figure>
+            </div>
+
+            <p><a href="#table-1-13">Tabella 1.13</a> dimostra l'uso indicato per combinare entrambi i formati.</p>
+
+            <table class="responsive-table" id="table-1-13">
+                <thead>
+                    <tr>
+                        <th class="green-text">
+                            <span class="hide-on-small-only"><i class="fas fa-thumbs-up"></i>&nbsp;&nbsp;Giusto</span>
+                            <span class="hide-on-med-and-up"><i class="fas fa-thumbs-up"></i></span>
+                        </th>
+                        <th class="red-text">
+                            <span class="hide-on-small-only"><i class="fas fa-thumbs-down"></i>&nbsp;&nbsp;Non consigliato</span>
+                            <span class="hide-on-med-and-up"><i class="fas fa-thumbs-down"></i></span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            Text***Really***Important.
+                        </td>
+                        <td>
+                            Text___Really___Important.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <small class="caption">Tabella 1.13 - Uso consigliato della formattazione Markdown per combinare grassetto e corsivo.</small>
+
+
+            <h2 id="blockquote">Blockquote</h2>
+
+            <p>Para marcar um conteúdo como blockquote no Markdown, use o sinal de maior que <code class="lang-text">&gt;</code> no começo do parágrafo.</p>
+
+            <div class="image-container">
+                <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote_w1280.webp 1280w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote_w1126.webp 1126w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote_w972.webp 972w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote_w818.webp 818w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote_w664.webp 664w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote_w510.webp 510w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote_w356.webp 356w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote_w202.webp 202w"
+		         sizes="(max-width: 664px) 100vw, 664px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Tutorial Markdown - Blockquote"
+		        	title="Tutorial Markdown - Blockquote"
+		         	src="https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote_w1280.png"
+		         	srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote_w1280.png 1280w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote_w1126.png 1126w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote_w972.png 972w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote_w818.png 818w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote_w664.png 664w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote_w510.png 510w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote_w356.png 356w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote_w202.png 202w"
+		         	sizes="(max-width: 664px) 100vw, 664px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote_w1280.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Blockquote in Markdown.</span>
+		</figcaption>
+		</figure>
+            </div>
+
+            <p>Ad esempio, questo tag Markdown:</p>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>&gt; Contenuto Blockquote.</code></pre>
+	<a href="/editore/?markdown=>%20Contenuto%20Blockquote%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+            <p>Questo output risulterebbe in HTML:</p>
+
+            <blockquote>
+                <p>Contenuto Blockquote.</p>
+            </blockquote>
+
+            <h3 id="blockquote-muiltiple-paragraphs">Blockquote con più paragrafi</h3>
+
+            <p>Se você precisa de um blockquote contendo diversos parágrafos dentro dele, utilize o sinal de maior que <code class="lang-plaintext">&gt;</code> a frente de cada um desses parágrafos e os separe por uma linha contendo apenas o sinal de maior que.</p>
+
+            <div class="image-container">
+                <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote-paragraphs_w1280.webp 1280w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote-paragraphs_w1126.webp 1126w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote-paragraphs_w972.webp 972w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote-paragraphs_w818.webp 818w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote-paragraphs_w664.webp 664w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote-paragraphs_w510.webp 510w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote-paragraphs_w356.webp 356w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote-paragraphs_w202.webp 202w"
+		         sizes="(max-width: 664px) 100vw, 664px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Tutorial Markdown - Blockquote con più paragrafi"
+		        	title="Tutorial Markdown - Blockquote con più paragrafi"
+		         	src="https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote-paragraphs_w1280.png"
+		         	srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote-paragraphs_w1280.png 1280w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote-paragraphs_w1126.png 1126w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote-paragraphs_w972.png 972w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote-paragraphs_w818.png 818w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote-paragraphs_w664.png 664w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote-paragraphs_w510.png 510w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote-paragraphs_w356.png 356w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote-paragraphs_w202.png 202w"
+		         	sizes="(max-width: 664px) 100vw, 664px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote-paragraphs_w1280.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Blockquote con più paragrafi</span>
+		</figcaption>
+		</figure>
+            </div>
+
+            <blockquote><b>NOTA</b>: Il segno maggiore di <code class="lang-text">></code> deve essere posizionato sulla riga che separa i paragrafi in modo che il processore Markdown possa interpretare correttamente il suo markup.</blockquote>
+
+            <p>Diamo un'occhiata a un esempio:</p>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>&gt; Primo paragrafo della citazione.
+&gt;
+&gt; Secondo paragrafo del blockquote.</code></pre>
+	<a href="/editore/?markdown=>%20Primo%20paragrafo%20della%20citazione%2E%0D%0A>%0D%0A>%20Secondo%20paragrafo%20del%20blockquote%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+            <p>L'output in HTML:</p>
+
+            <blockquote>
+                <p>Primo paragrafo della citazione.</p>
+                <p>Secondo paragrafo del blockquote.</p>
+            </blockquote>
+
+            <h3 id="blockquote-nested">Blockquotes annidato</h3>
+
+            <p>Oltre ad inserire più paragrafi all'interno di un blockquote, puoi anche nidificarli, cioè inserendo blockquotes all'interno di blockquotes, complex? Semplifichiamo.</p>
+
+            <p>Per creare un blocco nidificato, utilizzare due segni di maggiore di <code class="lang-text">>></code> prima del paragrafo.</p>
+
+            <p>Esempio:</p>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>&gt; Contenuto Blockquote.
+&gt;
+&gt;&gt; Questo paragrafo verrà interpretato come un blockquote annidato.</code></pre>
+	<a href="/editore/?markdown=>%20Contenuto%20Blockquote%2E%0D%0A>%0D%0A>>%20Questo%20paragrafo%20verr%C3%A0%20interpretato%20come%20un%20blockquote%20annidato%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+            <p>Rendering in HTML:</p>
+
+            <blockquote>
+                <p>Contenuto Blockquote.</p>
+                <blockquote>
+                    <p>Questo paragrafo verrà interpretato come un blockquote annidato.</p>
+                </blockquote>
+            </blockquote>
+
+            <h3 id="blockquote-other-elements">Blockquote con altri elementi</h3>
+
+            <p>La versatilità del blockquotes permette l'inserimento di altri elementi Markdown al loro interno.</p>
+
+            <blockquote><b>NOTA</b>: alcuni elementi Markdown potrebbero non essere visualizzati correttamente quando inseriti in un blockquote, questo varia molto tra i processori Markdown.</blockquote>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>&gt; #### Titolo h4 all'interno del blocco
+&gt;
+&gt; - Primo elemento della lista all'interno del blockquote.
+&gt; - Secondo elemento della lista all'interno del blockquote.
+&gt;
+&gt;  *Testo in corsivo* parte del paragrafo senza formattazione **testo grassetto**.</code></pre>
+	<a href="/editore/?markdown=>%20%23%23%23%23%20Titolo%20h4%20all%27interno%20del%20blocco%0D%0A>%0D%0A>%20%2D%20Primo%20elemento%20della%20lista%20all%27interno%20del%20blockquote%2E%0D%0A>%20%2D%20Secondo%20elemento%20della%20lista%20all%27interno%20del%20blockquote%2E%0D%0A>%0D%0A>%20%20%2ATesto%20in%20corsivo%2A%20parte%20del%20paragrafo%20senza%20formattazione%20%2A%2Atesto%20grassetto%2A%2A%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+            <p>L'output in HTML:</p>
+
+            <blockquote>
+                <h4>Titolo h4 all'interno del blocco</h4>
+                <ul>
+                    <li>Primo elemento della lista all'interno del blockquote.</li>
+                    <li>Secondo elemento della lista all'interno del blockquote.</li>
+                </ul>
+                <p>Parte di testo in corsivo del paragrafo senza formattazione <strong>testo in grassetto</strong>.</p>
+            </blockquote>
+
+
+            <h2 id="lists">Liste</h2>
+
+            <p>Gli elenchi sono essenziali per organizzare gli argomenti all'interno del documento. Un elenco facilita la visualizzazione di elementi che possono essere correlati tra loro.</p>
+
+            <p>Per creare una lista in Markdown usiamo numeri per liste ordinate, cioè in sequenza e trattini <code class="lang-text">-</code>, o segni più <code class="lang-text">+</code>, o asterischi <code class="lang-text">*</code> per liste non ordinate.</p>
+
+            <h3 id="lists-ordered">Elenchi ordinati</h3>
+
+            <p>Cominciamo ordinando gli elementi della nostra lista, per questo mettiamo un numero seguito da un punto e il testo dell'elemento.</p>
+
+            <p>Vale la pena notare che i numeri degli elementi non devono essere in ordine numerico crescente, tuttavia, il primo elemento nell'elenco deve iniziare con il numero uno <code class="lang-text">1</code>.</p>
+
+            <p class="mv-40">
+                <ins class="adsbygoogle"
+                     style="display:block; text-align:center;"
+                     data-ad-layout="in-article"
+                     data-ad-format="fluid"
+                     data-ad-client="ca-pub-3427355473051563"
+                     data-ad-slot="3854885260"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </p>
+
+            <blockquote><b>NOTA</b>: per creare un elemento rientrato, inserire una tabulazione prima del numero che contrassegna l'elemento. In alcuni processori Markdown è possibile inserire anche 3 spazi prima della numerazione, il risultato è simile, tuttavia questo può variare a seconda dell'applicazione, in caso di dubbio utilizzare TAB.</blockquote>
+
+            <p class="mt-60"><b>ESEMPI</b></p>
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>1. Primo elemento
+2. Secondo elemento
+3. Terzo elemento
+4. Quarto elemento</code></pre>
+	<a href="/editore/?markdown=1%2E%20Primo%20elemento%0D%0A2%2E%20Secondo%20elemento%0D%0A3%2E%20Terzo%20elemento%0D%0A4%2E%20Quarto%20elemento" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>&lt;ol&gt;
+    &lt;li&gt;Primo elemento&lt;/li&gt;
+    &lt;li&gt;Secondo elemento&lt;/li&gt;
+    &lt;li&gt;Terzo elemento&lt;/li&gt;
+    &lt;li&gt;Quarto elemento&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>Risultato</b></p>
+                <div class="code-sample">
+                    <ol>
+                        <li>Primo elemento</li>
+                        <li>Secondo elemento</li>
+                        <li>Terzo elemento</li>
+                        <li>Quarto elemento</li>
+                    </ol>
+                </div>
+            </div>
+
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>1. Primo elemento
+1. Secondo elemento
+1. Terzo elemento
+1. Quarto elemento</code></pre>
+	<a href="/editore/?markdown=1%2E%20Primo%20elemento%0D%0A1%2E%20Secondo%20elemento%0D%0A1%2E%20Terzo%20elemento%0D%0A1%2E%20Quarto%20elemento" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>&lt;ol&gt;
+    &lt;li&gt;Primo elemento&lt;/li&gt;
+    &lt;li&gt;Secondo elemento&lt;/li&gt;
+    &lt;li&gt;Terzo elemento&lt;/li&gt;
+    &lt;li&gt;Quarto elemento&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>Risultato</b></p>
+                <div class="code-sample">
+                    <ol>
+                        <li>Primo elemento</li>
+                        <li>Secondo elemento</li>
+                        <li>Terzo elemento</li>
+                        <li>Quarto elemento</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>1. Primo elemento
+8. Secondo elemento
+3. Terzo elemento
+5. Quarto elemento</code></pre>
+	<a href="/editore/?markdown=1%2E%20Primo%20elemento%0D%0A8%2E%20Secondo%20elemento%0D%0A3%2E%20Terzo%20elemento%0D%0A5%2E%20Quarto%20elemento" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>&lt;ol&gt;
+    &lt;li&gt;Primo elemento&lt;/li&gt;
+    &lt;li&gt;Secondo elemento&lt;/li&gt;
+    &lt;li&gt;Terzo elemento&lt;/li&gt;
+    &lt;li&gt;Quarto elemento&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>Risultato</b></p>
+                <div class="code-sample">
+                    <ol>
+                        <li>Primo elemento</li>
+                        <li>Secondo elemento</li>
+                        <li>Terzo elemento</li>
+                        <li>Quarto elemento</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>1. Primo elemento
+2. Secondo elemento
+3. Terzo elemento
+    1. Elemento rientrato
+    2. Elemento rientrato
+4. Quarto elemento</code></pre>
+	<a href="/editore/?markdown=1%2E%20Primo%20elemento%0D%0A2%2E%20Secondo%20elemento%0D%0A3%2E%20Terzo%20elemento%0D%0A%20%20%20%201%2E%20Elemento%20rientrato%0D%0A%20%20%20%202%2E%20Elemento%20rientrato%0D%0A4%2E%20Quarto%20elemento" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>&lt;ol&gt;
+    &lt;li&gt;Primo elemento&lt;/li&gt;
+    &lt;li&gt;Secondo elemento&lt;/li&gt;
+    &lt;li&gt;Terzo elemento&lt;/li&gt;
+    &lt;ol&gt;
+        &lt;li&gt;Elemento rientrato&lt;/li&gt;
+        &lt;li&gt;Elemento rientrato&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Quarto elemento&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>Risultato</b></p>
+                <div class="code-sample">
+                    <ol>
+                        <li>Primo elemento</li>
+                        <li>Secondo elemento</li>
+                        <li>
+                            Terzo elemento
+                            <ol>
+                                <li>Elemento rientrato</li>
+                                <li>Elemento rientrato</li>
+                            </ol>
+                        </li>
+                        <li>Quarto elemento</li>
+                    </ol>
+                </div>
+            </div>
+
+            <h3 id="lists-unordered">Elenchi non ordinati</h3>
+
+            <p>Una lista non ordinata è una sequenza di elementi denotata, di solito da qualche simbolo a sinistra dell'elemento, cioè non c'è una sequenza numerica qui.</p>
+
+            <p>Il markup per Markdown per creare elenchi non ordinati è il segno più <code class="lang-text">+</code>, o il trattino <code class="lang-text">-</code> o l'asterisco <code class="lang-text">*</code>.</p>
+
+            <p class="mv-40">
+                <ins class="adsbygoogle"
+                     style="display:block; text-align:center;"
+                     data-ad-layout="in-article"
+                     data-ad-format="fluid"
+                     data-ad-client="ca-pub-3427355473051563"
+                     data-ad-slot="3854885260"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </p>
+
+            <p>Posiziona uno di questi due segni prima della voce dell'elenco per delimitarla, seguito da uno spazio vuoto e dal contenuto dell'elemento.</p>
+
+            <blockquote><b>NOTA</b>: fa rientrare un elemento nell'elenco inserendo una tabulazione prima che l'elemento sia contrassegnato.</blockquote>
+
+            <p class="mt-60"><b>ESEMPI</b></p>
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>- Primo elemento
+- Secondo elemento
+- Terzo elemento
+- Quarto elemento</code></pre>
+	<a href="/editore/?markdown=%2D%20Primo%20elemento%0D%0A%2D%20Secondo%20elemento%0D%0A%2D%20Terzo%20elemento%0D%0A%2D%20Quarto%20elemento" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>&lt;ul&gt;
+    &lt;li&gt;Primo elemento&lt;/li&gt;
+    &lt;li&gt;Secondo elemento&lt;/li&gt;
+    &lt;li&gt;Terzo elemento&lt;/li&gt;
+    &lt;li&gt;Quarto elemento&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>Risultato</b></p>
+                <div class="code-sample">
+                    <ul class="browser-default">
+                        <li>Primo elemento</li>
+                        <li>Secondo elemento</li>
+                        <li>Terzo elemento</li>
+                        <li>Quarto elemento</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>* Primo elemento
+* Secondo elemento
+* Terzo elemento
+* Quarto elemento</code></pre>
+	<a href="/editore/?markdown=%2A%20Primo%20elemento%0D%0A%2A%20Secondo%20elemento%0D%0A%2A%20Terzo%20elemento%0D%0A%2A%20Quarto%20elemento" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>&lt;ul&gt;<br>
+    &lt;li&gt;Primo elemento&lt;/li&gt;<br>
+    &lt;li&gt;Secondo elemento&lt;/li&gt;<br>
+    &lt;li&gt;Terzo elemento&lt;/li&gt;<br>
+    &lt;li&gt;Quarto elemento&lt;/li&gt;<br>
+&lt;/ul&gt;</code></pre>
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>Risultato</b></p>
+                <div class="code-sample">
+                    <ul class="browser-default">
+                        <li>Primo elemento</li>
+                        <li>Secondo elemento</li>
+                        <li>Terzo elemento</li>
+                        <li>Quarto elemento</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>+ Primo elemento
+* Secondo elemento
+- Terzo elemento
++ Quarto elemento</code></pre>
+	<a href="/editore/?markdown=%2B%20Primo%20elemento%0D%0A%2A%20Secondo%20elemento%0D%0A%2D%20Terzo%20elemento%0D%0A%2B%20Quarto%20elemento" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>&lt;ul&gt;<br>
+    &lt;li&gt;Primo elemento&lt;/li&gt;<br>
+    &lt;li&gt;Secondo elemento&lt;/li&gt;<br>
+    &lt;li&gt;Terzo elemento&lt;/li&gt;<br>
+    &lt;li&gt;Quarto elemento&lt;/li&gt;<br>
+&lt;/ul&gt;</code></pre>
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>Risultato</b></p>
+                <div class="code-sample">
+                    <ul class="browser-default">
+                        <li>Primo elemento</li>
+                        <li>Secondo elemento</li>
+                        <li>Terzo elemento</li>
+                        <li>Quarto elemento</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>- Primo elemento
+- Secondo elemento
+- Terzo elemento
+    - Elemento rientrato
+    - Elemento rientrato
+- Quarto elemento</code></pre>
+	<a href="/editore/?markdown=%2D%20Primo%20elemento%0D%0A%2D%20Secondo%20elemento%0D%0A%2D%20Terzo%20elemento%0D%0A%20%20%20%20%2D%20Elemento%20rientrato%0D%0A%20%20%20%20%2D%20Elemento%20rientrato%0D%0A%2D%20Quarto%20elemento" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>&lt;ul&gt;
+    &lt;li&gt;Primo elemento&lt;/li&gt;
+    &lt;li&gt;Secondo elemento&lt;/li&gt;
+    &lt;li&gt;Terzo elemento
+    &lt;ul&gt;
+        &lt;li&gt;Elemento rientrato&lt;/li&gt;
+        &lt;li&gt;Elemento rientrato&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Quarto elemento&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>Risultato</b></p>
+                <div class="code-sample">
+                    <ul class="browser-default">
+                        <li>Primo elemento</li>
+                        <li>Secondo elemento</li>
+                        <li>
+                            Terzo elemento
+                            <ul class="browser-default">
+                                <li>Elemento Rientrato</li>
+                                <li>Elemento rientrato</li>
+                            </ul>
+                        </li>
+                        <li>Quarto elemento</li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+
+            <h3 id="lists-adding-elements">Aggiunta di elementi</h3>
+
+            <p>Markdown ti permette di inserire altri elementi nel mezzo di una lista senza interromperne la continuità.</p>
+
+            <p>Per preservare la formattazione dell'elenco, rientra il diverso elemento di 4 spazi o di una tabulazione.</p>
+
+            <h3 id="lists-paragraph">Paragrafi</h3>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>* Questo è il primo elemento della lista.
+* Questo è il secondo elemento della lista.
+    Un paragrafo aggiunto senza interrompere la stringa dell'elenco.
+* E infine il terzo elemento della lista.</code></pre>
+	<a href="/editore/?markdown=%2A%20Questo%20%C3%A8%20il%20primo%20elemento%20della%20lista%2E%0D%0A%2A%20Questo%20%C3%A8%20il%20secondo%20elemento%20della%20lista%2E%0D%0A%20%20%20%20Un%20paragrafo%20aggiunto%20senza%20interrompere%20la%20stringa%20dell%27elenco%2E%0D%0A%2A%20E%20infine%20il%20terzo%20elemento%20della%20lista%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+            <p>Il risultato sarebbe questo:</p>
+            <ul class="browser-default">
+                <li>Questo è il primo elemento della lista.</li>
+                <li>Questo è il secondo elemento della lista.</li>
+                <li>
+                    <p>Un paragrafo aggiunto senza interrompere la stringa dell'elenco.</p>
+                </li>
+                <li>E infine il terzo elemento della lista.</li>
+            </ul>
+
+            <h3 id="lists-blockquote">Blockquote nell'elenco</h3>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>* Questo è il primo elemento della lista.
+* Questo è il secondo elemento della lista.
+
+    &gt; Blockquote al centro dell'elenco.
+
+* E infine il terzo elemento della lista.</code></pre>
+	<a href="/editore/?markdown=%2A%20Questo%20%C3%A8%20il%20primo%20elemento%20della%20lista%2E%0D%0A%2A%20Questo%20%C3%A8%20il%20secondo%20elemento%20della%20lista%2E%0D%0A%0D%0A%20%20%20%20>%20Blockquote%20al%20centro%20dell%27elenco%2E%0D%0A%0D%0A%2A%20E%20infine%20il%20terzo%20elemento%20della%20lista%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+            <p>Il risultato sarebbe simile a questo:</p>
+
+            <ul class="browser-default">
+                <li>Questo è il primo elemento della lista.</li>
+                <li>
+                    <p>Questo è il secondo elemento della lista.</p>
+                    <blockquote>
+                        <p>Blockquote al centro dell'elenco.</p>
+                    </blockquote>
+                </li>
+                <li>Ed ecco il terzo elemento della lista.</li>
+            </ul>
+
+
+            <h3 id="lists-code-block">Blocco di codice</h3>
+
+            <p>Quando si inserisce un blocco di codice all'interno di un elenco, rientra di otto spazi o due tabulazioni.</p>
+
+            <p>Di seguito è riportato un esempio di un elenco con un blocco di codice al suo interno.</p>
+
+            <div class="language-text highlighter-rouge">
+                <div class="highlight">
+                    <div class="code-example">
+	<pre class="lang-markdown"><code>1. Per prima cosa apriamo il nostro file index.html.
+2. Individua il blocco di codice mostrato di seguito:
+
+        &lt;html&gt;
+            &lt;head&gt;
+            &lt;title&gt;Il titolo del mio sito web&lt;/title&gt;
+        &lt;/head&gt;
+
+3. Cambia il titolo della pagina.</code></pre>
+	<a href="/editore/?markdown=1%2E%20Per%20prima%20cosa%20apriamo%20il%20nostro%20file%20index%2Ehtml%2E%0D%0A2%2E%20Individua%20il%20blocco%20di%20codice%20mostrato%20di%20seguito:%0D%0A%0D%0A%20%20%20%20%20%20%20%20<html>%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20<head>%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20<title>Il%20titolo%20del%20mio%20sito%20web<%2Ftitle>%0D%0A%20%20%20%20%20%20%20%20<%2Fhead>%0D%0A%0D%0A3%2E%20Cambia%20il%20titolo%20della%20pagina%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+                </div>
+            </div>
+
+            <p>Il risultato è simile a questo:</p>
+
+            <ol>
+                <li>Per prima cosa apriamo il nostro file index.html.</li>
+                <li>
+                    <p>Individua il blocco di codice mostrato di seguito:</p>
+                    <pre class="lang-html"><code>&lt;html&gt;
+    &lt;head&gt;
+    &lt;title&gt;Il titolo del mio sito web&lt;/title&gt;
+&lt;/head&gt;</code></pre>
+                </li>
+                <li>Cambia il titolo della pagina.</li>
+            </ol>
+
+            <p>Si noti che la sequenza numerica della lista non è cambiata nemmeno con l'inserimento del blocco di codice tra gli elementi.</p>
+
+            <h3 id="lists-images">immagini</h3>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>1. Per prima cosa apri il file del logo Markdown.
+2. Vedere il logo Markdown sullo schermo.
+
+    ![Logo Markdown](https://markdown.net.br/assets/img/basic-syntax/markdown-logo-small.png)
+
+3. Ora puoi chiudere il file.</code></pre>
+	<a href="/editore/?markdown=1%2E%20Per%20prima%20cosa%20apri%20il%20file%20del%20logo%20Markdown%2E%0D%0A2%2E%20Vedere%20il%20logo%20Markdown%20sullo%20schermo%2E%0D%0A%0D%0A%20%20%20%20%21[Logo%20Markdown]%28https:%2F%2Fmarkdown%2Enet%2Ebr%2Fassets%2Fimg%2Fbasic%2Dsyntax%2Fmarkdown%2Dlogo%2Dsmall%2Epng%29%0D%0A%0D%0A3%2E%20Ora%20puoi%20chiudere%20il%20file%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+            <p>Il rendering in HTML sarebbe simile a questo:</p>
+
+            <ol>
+                <li>Per prima cosa apri il file del logo Markdown.</li>
+                <li>
+                    <p>Vedere il logo Markdown sullo schermo.</p>
+                    <div class="image-container">
+                        <img src="https://markdown.net.br/assets/img/basic-syntax/markdown-logo-small.png" alt="Logo Markdown">
+                    </div>
+                </li>
+                <li>Ora puoi chiudere il file.</li>
+            </ol>
+
+
+            <h2 id="code">Codice</h2>
+
+            <p>Usando Markdown possiamo demarcare una parte del contenuto come codice usando le virgolette <code class="lang-text">`</code>. Metti un backquote prima e dopo il testo che verrà interpretato dal processore Markdown come codice.</p>
+
+            <p class="mt-60"><b>ESEMPIO:</b></p>
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>`codice`.</code></pre>
+	<a href="/editore/?markdown=`codice`%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>&lt;code&gt;codice.&lt;/code&gt;</code></pre>
+
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>Risultato</b></p>
+                <div class="code-sample">
+                    <code class="lang-text">codice</code>
+                </div>
+            </div>
+
+            <h3 id="escaping-backticks">Fuga dalla spina dorsale</h3>
+
+            <p>È possibile che si verifichi la seguente situazione.</p>
+
+            <p>Il contenuto a cui si intende applicare la formattazione del codice contiene già una citazione a ritroso. O se vuoi usare la virgoletta all'indietro per evidenziare parte del testo all'interno del codice stesso.</p>
+
+            <p>Per tradurre, è necessario inserire una citazione all'interno di una demarcazione del codice senza che questa citazione venga interpretata come markup Markdown.</p>
+
+            <p>La soluzione è semplice, duplica il retro iniziale e finale che circondano il pezzo di codice.</p>
+
+            <p class="mt-60"><b>ESEMPI</b></p>
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>``Utilizzo di "crase" nel markup del codice.``</code></pre>
+	<a href="/editore/?markdown=``Utilizzo%20di%20%22crase%22%20nel%20markup%20del%20codice%2E``" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>&lt;code&gt;Utilizzo di "crase" nel markup del codice.&lt;/code&gt;</code></pre>
+
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>Risultato</b></p>
+                <div class="code-sample">
+                    <p>Utilizzo di "crase" nel markup del codice.</p>
+                </div>
+            </div>
+
+
+            <h3 id="code-block">Blocco di codice</h3>
+
+            <p>Markdown ci permette di creare blocchi di codice indentando 4 spazi o una tabulazione.</p>
+
+            <p>Vedi il seguente esempio:</p>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>    &lt;html&gt;
+        &lt;head&gt;
+        &lt;/head&gt;
+    &lt;/html&gt;</code></pre>
+	<a href="/editore/?markdown=%20%20%20%20<html>%0D%0A%20%20%20%20%20%20%20%20<head>%0D%0A%20%20%20%20%20%20%20%20<%2Fhead>%0D%0A%20%20%20%20<%2Fhtml>" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+            <p>Il risultato:</p>
+
+            <pre class="lang-html"><code>&lt;html&gt;
+    &lt;head&gt;
+    &lt;/head&gt;
+&lt;/html&gt;</code></pre>
+
+            <p>Usando la sintassi estesa di Markdown possiamo creare blocchi di codice senza indentare spazi, per questo dobbiamo usare il tag <a href="/sintassi-estesa/#fenced-code-block">circondato da blocchi di codice</a>.</p>
+
+            <h2 id="horizontal-rule">Linee orizzontali</h2>
+
+            <p>Tre asterischi di seguito <code class="lang-text">***</code> o tre trattini <code class="lang-text">---</code> o tre trattini bassi <code class="lang-text">___</code> creano una linea orizzontale.</p>
+
+            <p>Una riga deve contenere solo quei caratteri affinché il processore Markdown interpreti correttamente la linea orizzontale.</p>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>***
+
+---
+
+_________________</code></pre>
+	<a href="/editore/?markdown=%2A%2A%2A%0D%0A%0D%0A%2D%2D%2D%0D%0A%0D%0A_________________" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+            <p>Usando uno qualsiasi dei caratteri il risultato sarà lo stesso, vedi sotto.</p>
+
+            <hr>
+
+            <blockquote><b>NOTA</b>: Non è necessario stabilire un numero massimo di caratteri per creare una riga, purché ne usi almeno 3 e la riga ha solo questi caratteri, puoi inserirne quanti ne vuoi.</blockquote>
+
+
+            <h3 id="horizontal-rule-best-practices">Linee orizzontali: buone pratiche</h3>
+
+            <p>Aggiungere sempre una riga vuota prima e dopo il segno di linea orizzontale. Ciò è necessario a causa della sintassi alternativa per la creazione dei titoli, se metti tre trattini <code class="lang-text">---</code> direttamente sotto una riga con il contenuto, questo verrà interpretato come un titolo di livello 2.</p>
+
+            <p><a href="#table-1-18">Tabella 1.18</a> esemplifica la creazione di linee orizzontali nel modo corretto.</p>
+
+            <table class="responsive-table" id="table-1-18">
+                <thead>
+                    <tr>
+                        <th class="green-text">
+                            <span class="hide-on-small-only"><i class="fas fa-thumbs-up"></i>&nbsp;&nbsp;Giusto</span>
+                            <span class="hide-on-med-and-up"><i class="fas fa-thumbs-up"></i></span>
+                        </th>
+                        <th class="red-text">
+                            <span class="hide-on-small-only"><i class="fas fa-thumbs-down"></i>&nbsp;&nbsp;Non consigliato</span>
+                            <span class="hide-on-med-and-up"><i class="fas fa-thumbs-down"></i></span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            Metti sempre una linea vuota prima di creare una linea orizzontale.<br><br>
+                            ---<br><br>
+                            Aggiungi una riga vuota dopo aver creato la linea orizzontale.
+                        </td>
+                        <td>
+                            Se non metti una riga vuota prima della riga orizzontale, questo contenuto verrà interpretato come un titolo di livello 2.<br>
+                            ---<br>
+                            Dov'è la linea vuota dopo la linea orizzontale?
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <small class="caption">Tabella 1.18 - Modo corretto per costruire una linea orizzontale in Markdown.</small>
+
+
+
+            <h2 id="links">Links</h2>
+
+            <p>Links vengono utilizzati per creare collegamenti tra parti del documento. Quando si tratta di creare una pagina per Web o anche file PDF, essere in grado di inserire links è una delle caratteristiche indispensabili per modificare questi tipi di documenti.</p>
+
+            <p>La sintassi di base per creare links in Markdown è la seguente:</p>
+
+            <ul class="collection">
+                <li class="collection-item green lighten-5">Metti il ​​testo che rappresenterà link tra parentesi quadre, esempio:<br><code class="lang-text">[Il miglior sito Markdown al mondo]</code>.</li>
+                <li class="collection-item yellow lighten-5">Quindi, l'indirizzo di link, noto anche come URL, deve essere racchiuso tra parentesi, esempio:<br><code class="lang-text">(https://markdown.net.br)</code></li>
+            </ul>
+
+            <p>Mettere tutto insieme.</p>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>Visitare [Il miglior sito Markdown al mondo](https://markdown.net.br).</code></pre>
+	<a href="/editore/?markdown=Visitare%20[Il%20miglior%20sito%20Markdown%20al%20mondo]%28https:%2F%2Fmarkdown%2Enet%2Ebr%29%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+            <p>E l'output su HTML.</p>
+
+            <p>Visita <a href="https://markdown.net.br" target="_blank">Il miglior sito Markdown al mondo</a></p>
+
+            <h3 id="links-adding-titles">Aggiunta di titoli</h3>
+
+            <p>Se hai un po 'di esperienza con HTML, sai che quando l'utente posiziona mouse su link nella pagina, di solito viene presentata all'utente una piccola etichetta che descrive lo scopo di link.</p>
+
+            <p>Questa etichetta è il titolo di link e per crearla usando Markdown basta aggiungere tra parentesi un testo tra virgolette dopo URL.</p>
+
+            <p>Esempio:</p>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>Visitare [Il miglior sito Markdown al mondo](https://markdown.net.br "Il riferimento definitivo per Markdown.").</code></pre>
+	<a href="/editore/?markdown=Visitare%20[Il%20miglior%20sito%20Markdown%20al%20mondo]%28https:%2F%2Fmarkdown%2Enet%2Ebr%20%22Il%20riferimento%20definitivo%20per%20Markdown%2E%22%29%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+            <p>Esci in HTML, posiziona mouse sullo link e guarda apparire il titolo.</p>
+
+            <p>Visitare <a href="https://markdown.net.br" title="Il riferimento definitivo per Markdown." target="_blank">Il miglior sito Markdown al mondo</a></p>
+
+
+            <h3 id="urls-email">indirizzi URLs e email</h3>
+
+            <p>Você também pode transformar uma URL em link automaticamente colocando-a entre os sinais de menor que <code class="lang-text">&lt;</code> e maior que <code class="lang-text">&gt;</code>.</p>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>&lt;https://markdown.net.br&gt;
+&lt;email@host.com&gt;</code></pre>
+	<a href="/editore/?markdown=<https:%2F%2Fmarkdown%2Enet%2Ebr>%0D%0A<email@host%2Ecom>" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+            <p>Il risultato è simile a questo:</p>
+
+            <p><a href="https://markdown.net.br/" target="_blank">https://markdown.net.br</a><br>
+                <a href="mailto:email@exemplo.com.br">email@host.com</a>
+            </p>
+
+            <h3 id="links-emphasis">Sottolineando links</h3>
+
+            <p>Aggiungendo asterischi attorno al formato link, cioè prima delle parentesi e dopo le parentesi, si indica al processore Markdown che quello link dovrebbe essere enfatizzato.</p>
+
+            <p>Per esempio:</p>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>Visita il sito web: *[Riferimento Markdown](https://markdown.net.br)*.
+Raccomando il motore di ricerca: **[Duck Duck GO](https://duckduckgo.com/)**.</code></pre>
+	<a href="/editore/?markdown=Visita%20il%20sito%20web:%20%2A[Riferimento%20Markdown]%28https:%2F%2Fmarkdown%2Enet%2Ebr%29%2A%2E%0D%0ARaccomando%20il%20motore%20di%20ricerca:%20%2A%2A[Duck%20Duck%20GO]%28https:%2F%2Fduckduckgo%2Ecom%2F%29%2A%2A%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+            <p>L'output in HTML sarebbe simile a questo:</p>
+
+            <p>Visita il sito web: <a href="https://markdown.net.br" target="_blank">Riferimento Markdown</a>
+                <br>
+                Consiglio il motore di ricerca: <a href="https://duckduckgo.com/" target="_blank">Duck Duck GO</a>.
+            </p>
+
+            <p>Puoi anche evidenziare un link utilizzando la formattazione del codice.</p>
+
+            <p>Esempio:</p>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>Rivedi la sezione: [`codice`](#code).</code></pre>
+	<a href="/editore/?markdown=Rivedi%20la%20sezione:%20[`codice`]%28%23code%29%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+            <p>Risultato:</p>
+
+            <p>Rivedi la sezione: <a href="#code"><code class="lang-markdown">codice</code></a></p>
+
+            <h3 id="links-reference">stile di riferimento Links</h3>
+
+            <p>Markdown offre una sintassi alternativa per la creazione di links che consente una visualizzazione più pulita del documento.</p>
+
+            <p>Con questa sintassi puoi posizionare il testo che verrà trasformato in link al centro del paragrafo con un solo riferimento, alla fine del documento aggiungi tutti i links usando gli stessi riferimenti di prima.</p>
+
+            <blockquote><b>NOTA</b>: puoi inserire il riferimento link ovunque nel tuo documento, lo consiglio alla fine per motivi di organizzazione.</blockquote>
+
+            <p>Poiché la creazione di questo riferimento link è divisa in due parti, analizzeremo ciascuna di esse.</p>
+
+            <h3 id="links-formatting-first-part">Prima parte di link</h3>
+
+            <p>Per prima cosa creeremo due serie di parentesi quadre, all'interno del primo posto il testo di link, cioè il testo che apparirà sulla pagina, in secondo luogo un'etichetta che servirà da riferimento per l'indirizzo di link:</p>
+
+            <pre class="lang-markdown"><code>[Markdown - Wikipedia][1]</code></pre>
+
+            <blockquote><b>NOTA</b>: L'etichetta del riferimento link, situata all'interno della seconda coppia di parentesi quadre, può essere qualsiasi cosa, numeri, parole, frasi, può anche includere la punteggiatura, dipende da te, purché il riferimento a lo link alla fine del documento è lo stesso.</blockquote>
+
+            <p>Esempi:</p>
+
+            <pre class="lang-markdown"><code>[Markdown - Wikipedia][wiki_markdown.1]
+[Sito ufficiale di John Gruber][JOHN GRUBER]</code></pre>
+
+            <blockquote><b>NOTA</b>: Anche l'etichetta di riferimento non fa distinzione tra maiuscole e minuscole, ad esempio wiki_markdown è uguale a WIKI_MARKDOWN.</blockquote>
+
+
+            <h3 id="links-formatting-second-part">Seconda parte di link</h3>
+
+            <p>La seconda parte indica dove punta quel link, cioè il URL di link.</p>
+
+            <p>Per assemblare la seconda parte di link dobbiamo avere quanto segue:</p>
+
+            <ol>
+                <li>Un'etichetta di riferimento link valida creata in precedenza nel documento, racchiuderla tra parentesi quadre, seguita da due punti e almeno uno spazio vuoto (ad esempio, <code class="lang-markdown">[etichetta]:</code>).</li>
+                <li>O endereço do link, opcionalmente essa URL pode estar entre os sinais de menor que <code class="lang-text">&lt;</code> e maior que <code class="lang-text">&gt;</code>.</li>
+                <li>Il titolo dello link tra virgolette "<code class="lang-plaintext"></code>", virgolette singole <code class="lang-plaintext">''</code> o parentesi <code class="lang-plaintext">()</code>, ovviamente, il titolo è facoltativo.</li>
+            </ol>
+
+            <p>Tutti gli esempi seguenti sono validi per la formattazione della seconda parte:</p>
+
+            <pre class="lang-markdown"><code>[1]: https://en.wikipedia.org/wiki/Markdown
+[1]: https://en.wikipedia.org/wiki/Markdown "Markdown - Wikipedia"
+[1]: https://en.wikipedia.org/wiki/Markdown 'Markdown - Wikipedia'
+[1]: https://en.wikipedia.org/wiki/Markdown (Markdown - Wikipedia)
+[1]: &lt;https://en.wikipedia.org/wiki/Markdown&gt; "Markdown - Wikipedia"
+[1]: &lt;https://en.wikipedia.org/wiki/Markdown&gt; 'Markdown - Wikipedia'
+[1]: &lt;https://en.wikipedia.org/wiki/Markdown&gt; (Markdown - Wikipedia)</code></pre>
+
+
+            <p>Sottolineo di nuovo che puoi inserire questa seconda parte di link ovunque nel tuo documento, la aggiungo alla fine del file per motivi di organizzazione</p>
+
+
+            <h3 id="links-all-together">Mettere insieme tutti i pezzi</h3>
+
+            <p>Qui ti presenterò una situazione in cui l'uso del riferimento links può rendere il tuo documento Markdown più facile da leggere.</p>
+
+            <p>Supponiamo che sia necessario aggiungere uno o più links a un sito Web con ulteriori informazioni sul contenuto trattato in quel paragrafo.</p>
+
+            <p>In Markdown sarebbe simile a questo:</p>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>Per saperne di più puoi consultare questo articolo di Markdown: [Wikipedia](https://en.wikipedia.org/wiki/Markdown "Markdown - Wikipedia"). O la documentazione in lingua: [John Gruber](https://daringfireball.net/projects/markdown/ "Documentazione originale per Markdown.").</code></pre>
+	<a href="/editore/?markdown=Per%20saperne%20di%20pi%C3%B9%20puoi%20consultare%20questo%20articolo%20di%20Markdown:%20[Wikipedia]%28https:%2F%2Fen%2Ewikipedia%2Eorg%2Fwiki%2FMarkdown%20%22Markdown%20%2D%20Wikipedia%22%29%2E%20O%20la%20documentazione%20in%20lingua:%20[John%20Gruber]%28https:%2F%2Fdaringfireball%2Enet%2Fprojects%2Fmarkdown%2F%20%22Documentazione%20originale%20per%20Markdown%2E%22%29%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+            <p>Nota che l'aggiunta di links all'interno del paragrafo stesso può rendere il testo più difficile da leggere, specialmente se la persona che lo legge non conosce Markdown.</p>
+
+            <p>Poiché links sono importanti per il contesto del paragrafo, non possiamo rimuoverli, tuttavia esiste un modo più efficace per ripulire quel paragrafo utilizzando il riferimento links.</p>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>Per saperne di più puoi consultare questo articolo di Markdown: [Wikipedia][1]. O la documentazione in lingua: [John Gruber][2].
+
+[1]: &lt;https://en.wikipedia.org/wiki/Markdown&gt; "Markdown - Wikipedia"
+[2]: https://daringfireball.net/projects/markdown/ "Documentazione originale per Markdown."</code></pre>
+	<a href="/editore/?markdown=Per%20saperne%20di%20pi%C3%B9%20puoi%20consultare%20questo%20articolo%20di%20Markdown:%20[Wikipedia][1]%2E%20O%20la%20documentazione%20in%20lingua:%20[John%20Gruber][2]%2E%0D%0A%0D%0A[1]:%20<https:%2F%2Fen%2Ewikipedia%2Eorg%2Fwiki%2FMarkdown>%20%22Markdown%20%2D%20Wikipedia%22%0D%0A[2]:%20https:%2F%2Fdaringfireball%2Enet%2Fprojects%2Fmarkdown%2F%20%22Documentazione%20originale%20per%20Markdown%2E%22" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+            <blockquote><b>NOTA</b>: A colocação do sinal de menor que <code class="lang-text">&lt;</code> e de maior que <code class="lang-text">&gt;</code> ao redor do link é opcional.</blockquote>
+
+            <p>I due formati sopra avranno risultati idênticos in HTML:</p>
+
+            <p>Per saperne di più puoi consultare questo articolo di Markdown: <a href="https://en.wikipedia.org/wiki/Markdown" title="Markdown - Wikipedia" target="_blank">Wikipedia</a>. O la documentazione in lingua: <a href="https://daringfireball.net/projects/markdown/" title="Documentazione originale per Markdown." target="_blank">John Gruber</a>.</p>
+
+            <h3 id="links-best-practices">riferimento Links: best practice</h3>
+
+            <p>In alcuni casi, potresti incontrare spazi vuoti in URLs, questo può diventare un problema a seconda dell'applicazione Markdown.</p>
+
+            <p>Per evitare anomalie di formattazione, utilizza lo spazio bianco codificato: <code class="lang-text">%20</code>.</p>
+
+            <p><a href="#table-1-19">Tabella 1.19</a> presenta la formattazione dello spazio bianco in URL utilizzando la codifica.</p>
+
+            <table class="responsive-table" id="table-1-19">
+                <thead>
+                    <tr>
+                        <th class="green-text">
+                            <span class="hide-on-small-only"><i class="fas fa-thumbs-up"></i>&nbsp;&nbsp;Giusto</span>
+                            <span class="hide-on-med-and-up"><i class="fas fa-thumbs-up"></i></span>
+                        </th>
+                        <th class="red-text">
+                            <span class="hide-on-small-only"><i class="fas fa-thumbs-down"></i>&nbsp;&nbsp;Non consigliato</span>
+                            <span class="hide-on-med-and-up"><i class="fas fa-thumbs-down"></i></span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            [link](https://exemplo.com/my%20page)
+                        </td>
+                        <td>
+                            [link](https://exemplo.com/my page)
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <small class="caption">Tabella 1.19 - Uso dello spazio bianco codificato in URLs.</small>
+
+
+            <h2 id="images">immagini</h2>
+
+            <p>La sintassi per Markdown per aggiungere un'immagine è la seguente:</p>
+
+            <ol>
+                <li>Un punto esclamativo: <code class="lang-text">!</code>.</li>
+                <li>Il testo alternativo dell'immagine tra parentesi quadre: <code class="lang-plaintext">[]</code></li>
+                <li>L'indirizzo completo dell'immagine tra parentesi: <code class="lang-plaintext">()</code></li>
+                <li>Titolo facoltativo tra virgolette, ancora tra parentesi: <code class="lang-plaintext">( "")</code></li>
+            </ol>
+
+            <p>Esempio:</p>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>![Markdown è il linguaggio di markup più semplice al mondo!](https://markdown.net.br/assets/img/markdown.jpg "Logo Markdown")</code></pre>
+	<a href="/editore/?markdown=%21[Markdown%20%C3%A8%20il%20linguaggio%20di%20markup%20pi%C3%B9%20semplice%20al%20mondo%21]%28https:%2F%2Fmarkdown%2Enet%2Ebr%2Fassets%2Fimg%2Fmarkdown%2Ejpg%20%22Logo%20Markdown%22%29" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+            <p>La conversione in HTML è simile a questa:</p>
+
+            <div class="image-container">
+                <img src="https://markdown.net.br/assets/img/markdown.jpg" class="materialboxed" alt="Markdown è il linguaggio di markup più semplice al mondo!" title="Logo Markdown">
+            </div>
+
+
+            <h3 id="images-link">Immagine e Link</h3>
+
+            <p>Per utilizzare un'immagine come link:</p>
+
+            <ol>
+                <li>Crea un normale formato link.</li>
+                <li>Nella prima coppia di parentesi nel formato link, che fa riferimento al tuo testo, usa il formato immagine Markdown che hai imparato appena sopra.</li>
+            </ol>
+
+            <p>Esempio:</p>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>[![Un'antica pietra nel deserto](https://markdown.net.br/assets/img/shiprock.jpg "Shiprock, New Mexico By Beau Rogers")](https://www.flickr.com/photos/beaurogers/31833779864/in/photolist-Qv3rFw-34mt9F-a9Cmfy-5Ha3Zi-9msKdv-o3hgjr-hWpUte-4WMsJ1-KUQ8N-deshUb-vssBD-6CQci6-8AFCiD-zsJWT-nNfsgB-dPDwZJ-bn9JGn-5HtSXY-6CUhAL-a4UTXB-ugPum-KUPSo-fBLNm-6CUmpy-4WMsc9-8a7D3T-83KJev-6CQ2bK-nNusHJ-a78rQH-nw3NvT-7aq2qf-8wwBso-3nNceh-ugSKP-4mh4kh-bbeeqH-a7biME-q3PtTf-brFpgb-cg38zw-bXMZc-nJPELD-f58Lmo-bXMYG-bz8AAi-bxNtNT-bXMYi-bXMY6-bXMYv)</code></pre>
+	<a href="/editore/?markdown=[%21[Un%27antica%20pietra%20nel%20deserto]%28https:%2F%2Fmarkdown%2Enet%2Ebr%2Fassets%2Fimg%2Fshiprock%2Ejpg%20%22Shiprock%2C%20New%20Mexico%20By%20Beau%20Rogers%22%29]%28https:%2F%2Fwww%2Eflickr%2Ecom%2Fphotos%2Fbeaurogers%2F31833779864%2Fin%2Fphotolist%2DQv3rFw%2D34mt9F%2Da9Cmfy%2D5Ha3Zi%2D9msKdv%2Do3hgjr%2DhWpUte%2D4WMsJ1%2DKUQ8N%2DdeshUb%2DvssBD%2D6CQci6%2D8AFCiD%2DzsJWT%2DnNfsgB%2DdPDwZJ%2Dbn9JGn%2D5HtSXY%2D6CUhAL%2Da4UTXB%2DugPum%2DKUPSo%2DfBLNm%2D6CUmpy%2D4WMsc9%2D8a7D3T%2D83KJev%2D6CQ2bK%2DnNusHJ%2Da78rQH%2Dnw3NvT%2D7aq2qf%2D8wwBso%2D3nNceh%2DugSKP%2D4mh4kh%2DbbeeqH%2Da7biME%2Dq3PtTf%2DbrFpgb%2Dcg38zw%2DbXMZc%2DnJPELD%2Df58Lmo%2DbXMYG%2Dbz8AAi%2DbxNtNT%2DbXMYi%2DbXMY6%2DbXMYv%29" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+            <p>Il risultato:</p>
+
+            <div class="image-container">
+                <a href="https://www.flickr.com/photos/beaurogers/31833779864/in/photolist-Qv3rFw-34mt9F-a9Cmfy-5Ha3Zi-9msKdv-o3hgjr-hWpUte-4WMsJ1-KUQ8N-deshUb-vssBD-6CQci6-8AFCiD-zsJWT-nNfsgB-dPDwZJ-bn9JGn-5HtSXY-6CUhAL-a4UTXB-ugPum-KUPSo-fBLNm-6CUmpy-4WMsc9-8a7D3T-83KJev-6CQ2bK-nNusHJ-a78rQH-nw3NvT-7aq2qf-8wwBso-3nNceh-ugSKP-4mh4kh-bbeeqH-a7biME-q3PtTf-brFpgb-cg38zw-bXMZc-nJPELD-f58Lmo-bXMYG-bz8AAi-bxNtNT-bXMYi-bXMY6-bXMYv" target="_blank"><img src="https://markdown.net.br/assets/img/shiprock.jpg" alt="Un'antica pietra nel deserto" title="Shiprock, New Mexico By Beau Rogers"></a>
+            </div>
+
+
+            <h2 id="escaping-characteres">Caratteri in fuga</h2>
+
+            <p>Per eseguire l'escape di un carattere in Markdown, ovvero per rappresentarlo letteralmente nel documento, inserire una barra rovesciata prima di esso.</p>
+
+            <p>Esempio:</p>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>\* La barra rovesciata prima dell'asterisco fa sì che il processore Markdown interpreti quella riga come un paragrafo e non come un elemento di un elenco.</code></pre>
+	<a href="/editore/?markdown=\%2A%20La%20barra%20rovesciata%20prima%20dell%27asterisco%20fa%20s%C3%AC%20che%20il%20processore%20Markdown%20interpreti%20quella%20riga%20come%20un%20paragrafo%20e%20non%20come%20un%20elemento%20di%20un%20elenco%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+            <p>Il risultato è simile a questo:</p>
+
+            <p>* La barra rovesciata prima dell'asterisco fa sì che il processore Markdown interpreti questa riga come un paragrafo e non come un elemento di un elenco.</p>
+
+            <h3 id="characteres-table">Personaggi a cui puoi sfuggire</h3>
+
+            <p><a href="#table-1-20">Tabella 1.20</a> mostra quali caratteri è possibile eseguire l'escape in Markdown utilizzando la barra rovesciata: <code class="lang-text">\</code>.</p>
+
+            <table class="striped responsive-table" id="table-1-20">
+                <thead>
+                    <tr>
+                        <th>Personaggio</th>
+                        <th>Nome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>\</td>
+                        <td>barra rovesciata</td>
+                    </tr>
+                    <tr>
+                        <td>`</td>
+                        <td>virgolette indietro (vedere anche <a href="#escaping-backticks">escape back virgolette nel blocco di codice</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>*</td>
+                        <td>asterisco</td>
+                    </tr>
+                    <tr>
+                        <td>_</td>
+                        <td>sottolineato</td>
+                    </tr>
+                    <tr>
+                        <td>{ }</td>
+                        <td>chiavi</td>
+                    </tr>
+                    <tr>
+                        <td>[ ]</td>
+                        <td>parentesi quadre</td>
+                    </tr>
+                    <tr>
+                        <td>( )</td>
+                        <td>parentesi</td>
+                    </tr>
+                    <tr>
+                        <td>#</td>
+                        <td>hash</td>
+                    </tr>
+                    <tr>
+                        <td>+</td>
+                        <td>più</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>segno meno</td>
+                    </tr>
+                    <tr>
+                        <td>.</td>
+                        <td>Punto</td>
+                    </tr>
+                    <tr>
+                        <td>!</td>
+                        <td>punto esclamativo</td>
+                    </tr>
+                    <tr>
+                        <td>|</td>
+                        <td>barra verticale (vedere anche <a href="/sintassi-estesa/#escaping-vertical-bars">uscire dalle barre verticali nelle tabelle</a>)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <small class="caption">Tabella 1.20 - Caratteri di cui è possibile eseguire l'escape in Markdown utilizzando la barra rovesciata.</small>
+
+            <h2 id="html">HTML e Markdown</h2>
+
+            <p>I programmatori che hanno già esperienza in HTML, a volte mescolano le due sintassi nello stesso documento, cioè HTML e Markdown.</p>
+
+            <p>HTML può essere utile in attività come la modifica degli attributi di elementi del documento come colori, posizione, dimensione e così via.</p>
+
+            <p>Posiziona tags HTML direttamente sul tuo documento.</p>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>**grassetto** &lt;em&gt;Corsivo&lt;/em&gt;</code></pre>
+	<a href="/editore/?markdown=%2A%2Agrassetto%2A%2A%20<em>Corsivo<%2Fem>" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+            <p>Il risultato è simile a questo:</p>
+
+            <p><b>grassetto</b> <em>itálico</em></p>
+
+            <h3 id="html-best-practices">HTML e Markdown: best practice</h3>
+
+            <p>È importante notare che non tutti i processori Markdown sono compatibili con tags HTML, in alcuni casi supportano solo un sottoinsieme di questi tags.</p>
+
+            <p>Prova ed errore possono essere una strategia. Prova a formattare il contenuto usando tags e controlla se l'output in HTML è come previsto o, naturalmente, consulta la documentazione dell'applicazione.</p>
+
+            <p>Non indentare la riga di tags in HTML, né con gli spazi né con le tabulazioni, questo può interferire con la formattazione dell'elemento quando convertito.</p>
+
+            <p>Inserire una riga vuota prima e dopo gli elementi del blocco, esempio: <code class="lang-html">&lt;div&gt;</code>, <code class="lang-html">&lt;table&gt;</code>, <code class="lang-html">&lt;pre&gt;</code>, <code class="lang-html">&lt;p&gt;</code>.</p>
+
+            <p>Evita di posizionare elementi Markdown all'interno del contenuto di tags HTML.</p>
+
+            <p>Il codice seguente, sebbene funzioni in alcuni editor, ha una combinazione di sintassi che può causare problemi di formattazione.</p>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>&lt;p&gt;Corsivo **grassetto**&lt;/p&gt;</code></pre>
+	<a href="/editore/?markdown=<p>Corsivo%20%2A%2Agrassetto%2A%2A<%2Fp>" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>Prova tu stesso</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+        </div>
+    </div>
+            <div class="col-12">
+  <ul class="collapsible">
+    <li class="active">
+      <div class="collapsible-header grey lighten-4"><i class="material-icons">share</i>Condividere</div>
+      <div class="collapsible-body">
+        <div class="collection">
+          <a href="#!" class="collection-item" data-sharer="twitter" data-title="Nozioni di base su Markdown®: sintassi, utilizzo ed esempi [passo dopo passo]" data-hashtags="markdown" data-url="https://it.markdown.net.br/sintassi-di-base/">
+            <i class="fab fa-twitter color-twitter"></i>&nbsp;&nbsp;Condividi su Twitter
+          </a>
+          <a href="#!" class="collection-item" data-sharer="facebook" data-hashtag="markdown" data-url="https://it.markdown.net.br/sintassi-di-base/">
+            <i class="fab fa-facebook color-facebook"></i>&nbsp;&nbsp;Condividi su Facebook
+          </a>
+          <a href="#!" class="collection-item" data-sharer="linkedin" data-url="https://it.markdown.net.br/sintassi-di-base/">
+            <i class="fab fa-linkedin color-linkedin"></i>&nbsp;&nbsp;Condividi su Linkedin
+          </a>
+          <a href="#!" class="collection-item" data-sharer="email" data-title="Nozioni di base su Markdown®: sintassi, utilizzo ed esempi [passo dopo passo]" data-url="https://it.markdown.net.br/sintassi-di-base/" data-subject="Ciao! Va bene? Ho trovato questa guida Markdown molto facile da seguire, dai un'occhiata quando puoi. Spero sia utile, ci vediamo più tardi." data-to="email@host.com">
+            <i class="fas fa-envelope color-email"></i>&nbsp;&nbsp;Condividi tramite e-mail
+          </a>
+          <a href="#!" class="collection-item" data-sharer="whatsapp" data-title="Nozioni di base su Markdown®: sintassi, utilizzo ed esempi [passo dopo passo]" data-url="https://it.markdown.net.br/sintassi-di-base/">
+            <i class="fab fa-whatsapp color-whatsapp"></i>&nbsp;&nbsp;Condividi tramite Whatsapp
+          </a>
+          <a href="#!" class="collection-item" data-sharer="telegram" data-title="Nozioni di base su Markdown®: sintassi, utilizzo ed esempi [passo dopo passo]" data-url="https://it.markdown.net.br/sintassi-di-base/" data-to="(00) 99999-9999">
+            <i class="fab fa-telegram color-telegram"></i>&nbsp;&nbsp;Condividi tramite Telegram
+          </a>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+          </div>
+          <!-- Table of contents -->
+          <div class="col hide-on-small-only m3 xl3 offset-xl1">
+            <div class="toc-wrapper" id="sticky-navigator">
+            </div>
+          </div>
+          <!-- Table of contents -->
+        </div>
+      </div>
+    </main>
+    <footer class="page-footer docs-footer">
+  <div class="container">
+    <div class="row" style="margin-bottom: 0;">
+      <div class="col s12 m10 offset-m1">
+        <div class="row">
+          <div class="col l4 s12" style="overflow: hidden;">
+            <a href="https://twitter.com/CodigoNetwork" class="twitter-follow-button" data-show-count="true" data-size="large" data-dnt="true">Seguire @CodigoNetwork</a>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div>
+            &copy;&nbsp;<noscript>2020</noscript><script type="text/javascript">document.write(new Date().getFullYear());</script> <strong>Markdown</strong>, Tutti i diritti riservati.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+    <!--  Scripts-->
+    <script src="/assets/js/bundle.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/show-invisibles/prism-show-invisibles.min.js" integrity="sha256-1baFoczEXwdtWBiZ6gbu7W1kn6XfPgKY4LkQQYNHTkM=" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/components/prism-asciidoc.min.js" integrity="sha256-Z6qgXS53J00CrN9qHl3CxGqX2A3qs6HwGi96bnk2e4w=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/components/prism-markdown.min.js" integrity="sha256-LVbOCHxYsNr9pF5KGdB2NphtO2FKM92SGFxRkWc9Ovg=" crossorigin="anonymous"></script>
+    <script src="/assets/js/search.min.js"></script>
+
+    <script src="/assets/js/vendor/jquery.lazy@1.7.9/jquery.lazy.min.js"></script>
+    <script src="/assets/js/vendor/jquery.lazy@1.7.9/jquery.lazy.youtube.min.js"></script>
+    <script src="/assets/js/vendor/jquery.lazy@1.7.9/jquery.lazy.picture.min.js"></script>
+    <!-- Lightbox das imagens -->
+    <script>
+      $(document).ready(function(){
+         $('.materialboxed').materialbox();
+
+         $('picture.lazy-img.unloaded, img.lazy-img, iframe.lazy-yt.unloaded').Lazy({
+             effect: 'fadeIn',
+             effectTime: 1000
+             // called after an element was successfully handled
+             // afterLoad: function(element) {
+             // // Remove a animação do loader da imagem
+             //     // element.height(element.closest('.img-lazy-container').find('.image-placeholder').height());
+
+             //     element.removeClass('unloaded');
+             // }
+         });
+       });
+      anchors.add("h2, h3, h5");
+      $('#sticky-navigator').stickyNavigator();
+    </script>
+    <!-- Twitter Button -->
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </body>
+</html>
